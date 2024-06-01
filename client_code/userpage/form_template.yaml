@@ -7,11 +7,6 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
-  components:
-  - name: label_1
-    properties: {align: center, text: SIGN UP}
-    type: Label
-    layout_properties: {grid_position: 'CAIFLW,ZPHEKH'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

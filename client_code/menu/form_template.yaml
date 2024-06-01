@@ -1,0 +1,40 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: button_5
+    properties: {text: HOME}
+    type: Button
+    layout_properties: {}
+  - name: button_4
+    properties: {text: QUIZ}
+    type: Button
+    layout_properties: {}
+  - name: button_3
+    properties: {text: MATERIAL}
+    type: Button
+    layout_properties: {}
+  - name: button_2
+    properties: {text: ABOUT}
+    type: Button
+    layout_properties: {}
+  - name: button_1
+    properties: {text: LOGIN}
+    type: Button
+    layout_properties: {}
+    data_bindings: []
+    event_bindings: {click: button_1_click}
+- name: label_1
+  properties: {text: Q LEARN}
+  type: Label
+  layout_properties: {slot: title}
+- name: image_1
+  properties: {height: 209}
+  type: Image
+  layout_properties: {slot: default}

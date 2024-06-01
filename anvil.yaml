@@ -2,12 +2,76 @@ dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
+  server_config: {auto_create_missing_columns: true}
+- source: /runtime/services/anvil/users.yml
+  client_config: {mfa_timeout_days: 30, require_secure_passwords: true, use_email: true,
+    allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
+    require_mfa: false, remember_me_days: 30, use_google: true}
+  server_config: {user_table: users}
+- source: /runtime/services/google.yml
+  client_config: {}
   server_config: {}
-startup: {type: form, module: login}
+startup: {type: form, module: menu}
 package_name: ELEARNING
 allow_embedding: false
 name: ELEARNING
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-standard}
 startup_form: null
+db_schema:
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    - name: remembered_logins
+      admin_ui: {order: 6, width: 200}
+      type: simpleObject
+    - name: mfa
+      admin_ui: {order: 7, width: 200}
+      type: simpleObject
+    - name: signed_up
+      admin_ui: {order: 8, width: 200}
+      type: datetime
+    - name: setup_complete
+      admin_ui: {order: 9, width: 200}
+      type: bool
+    - name: username
+      admin_ui: {order: 0.5, width: 200}
+      type: string
+    - name: role
+      admin_ui: {order: 0.75, width: 200}
+      type: string
+    title: Users
+  metrics:
+    client: none
+    server: full
+    columns:
+    - name: NumberOfLogins
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: date
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: Metrics
 renamed: true
