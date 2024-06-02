@@ -62,6 +62,9 @@ db_schema:
     - name: role
       admin_ui: {order: 0.75, width: 200}
       type: string
+    - name: name
+      admin_ui: {width: 200}
+      type: string
     title: Users
   metrics:
     client: none
@@ -74,4 +77,5 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: date
     title: Metrics
+  classrooms: {title: Classrooms}
 renamed: true

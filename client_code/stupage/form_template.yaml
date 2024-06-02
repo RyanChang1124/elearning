@@ -37,13 +37,17 @@ components:
   type: LinearPanel
   layout_properties: {slot: default}
   components:
-  - name: image_1
+  - name: student
     properties: {}
-    type: Image
+    type: Label
   - name: rich_text_1
-    properties: {content: 'Welcome back, !'}
+    properties: {content: ''}
     type: RichText
     layout_properties: {}
+    components:
+    - name: image_1
+      properties: {}
+      type: Image
   - name: outlined_card_1
     properties: {role: outlined-card}
     type: ColumnPanel
