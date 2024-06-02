@@ -92,7 +92,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'MHHSZO,HMHAYF'}
   - name: timer_1
-    properties: {interval: 5}
+    properties: {interval: 1}
     type: Timer
     layout_properties: {grid_position: 'GXQANV,SRIGNV'}
     event_bindings: {tick: timer_1_tick}

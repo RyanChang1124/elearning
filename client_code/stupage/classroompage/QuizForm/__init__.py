@@ -51,7 +51,7 @@ class QuizForm(QuizFormTemplate):
         self.start_time = anvil.server.call('get_current_time')
         self.time_remaining = question['time']
         self.timeleft.text = str(self.time_remaining)
-        self.timer_1.interval = time# Convert seconds to milliseconds
+        self.timer_1.interval = 1
         self.timer_1.enabled = True
 
     def timer_1_tick(self, **event_args):
@@ -73,6 +73,7 @@ class QuizForm(QuizFormTemplate):
         """This method is called when the button is clicked"""
         # Handle the user's answer
         # 'button' is the button that was clicked
+        self.timer_1.interval = 0
         self.record_answer(button)
 
         # Stop the timer
