@@ -20,6 +20,8 @@ class menu(menuTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.users.login_with_form()
+    if anvil.users.get_user('email') is not None:
+      loginadd()
     if anvil.users.get_user()['setup_complete'] is None:
       open_form('newuser')
     elif anvil.users.get_user()['setup_complete'] is True:

@@ -22,13 +22,14 @@ import pandas as pd
 def metricdateincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
   today = pd.to_datetime('today').normalize
+  today = str(today)
   if today in dates:
     metric = app_tables.metrics.get(date=today)
     metric['NumberOfLogins'] += 1
   else:
     app_tables.metrics.add_row(
     date=today,
-    logins= 1)
+    NumberOfLogins= 1)
 
 @anvil.server.callable
 def checkvalueusers(value):
