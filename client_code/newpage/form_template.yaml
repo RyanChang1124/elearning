@@ -1,0 +1,108 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XDTBCE,BZEPYQ'}
+    components:
+    - name: label_3
+      properties: {text: Welcome, font_size: 30, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'CDUIVH,HZZAUC'}
+    - name: label_4
+      properties: {text: Let's get started!}
+      type: Label
+      layout_properties: {grid_position: 'QDXIOO,FNQYPQ'}
+    - name: label_5
+      properties: {align: center, text: 'What will be your username?', font_size: 22}
+      type: Label
+      layout_properties: {grid_position: 'OCVTZE,WXQAIS'}
+    - name: outlined_1
+      properties: {role: outlined, align: center, text: '', placeholder: '...'}
+      type: TextBox
+      layout_properties: {grid_position: 'FCUICG,BFEWTH'}
+    - name: outlined_button_1
+      properties: {text: Submit, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'KGEJUZ,ZSZYDP'}
+      event_bindings: {click: outlined_button_1_click}
+  - name: outlined_card_2
+    properties: {role: outlined-card, visible: false}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IKZJQU,RLFBXQ'}
+    components:
+    - name: label_7
+      properties: {align: center, text: 'What''s your real name? (this will only be
+          visible to members of your class)', font: '', font_size: 22}
+      type: Label
+      layout_properties: {grid_position: 'BLDGVK,BHUEFF'}
+    - name: outlined_2
+      properties: {role: outlined, align: center, placeholder: '...'}
+      type: TextBox
+      layout_properties: {grid_position: 'CLTVSE,MEDWNT'}
+    - name: outlined_button_2
+      properties: {text: That's Me!, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'RIDOML,RLYXPK'}
+      event_bindings: {click: outlined_button_2_click}
+  - name: outlined_card_3
+    properties: {role: outlined-card, visible: false}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FMWXII,CIJDQC'}
+    components:
+    - name: label_6
+      properties: {align: center, font_size: 22, text: Are you a...}
+      type: Label
+      layout_properties: {grid_position: 'RJUNLG,JFCCLR'}
+    - name: outlined_button_3
+      properties: {text: Student, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'WDVZKY,ERLLYF'}
+      event_bindings: {click: outlined_button_3_click}
+    - name: label_8
+      properties: {align: center, text: or a...}
+      type: Label
+      layout_properties: {grid_position: 'PHLSVV,RFEMVJ'}
+    - name: outlined_button_4
+      properties: {text: Lecturer, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'BZGWMC,ZDGWCD'}
+      event_bindings: {click: outlined_button_4_click}
+    - name: label_9
+      properties: {text: '?', align: center}
+      type: Label
+      layout_properties: {grid_position: 'BJFCZB,YBRZBM'}
+  - name: outlined_card_4
+    properties: {role: outlined-card, visible: false}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'RWXGBS,MJRVPW'}
+    components:
+    - name: label_10
+      properties: {font_size: 22, align: center, text: 'You''re all set, welcome home!'}
+      type: Label
+      layout_properties: {grid_position: 'UIVCHF,VYHAOQ'}
+    - name: label_11
+      properties: {align: center, text: redirecting to portal...}
+      type: Label
+      layout_properties: {grid_position: 'RHXQSJ,GOYUPA'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: New User}
+    type: Label
+    layout_properties: {}
+- name: label_1
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}

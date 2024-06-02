@@ -23,9 +23,9 @@ class menu(menuTemplate):
     if anvil.users.get_user('email') is not None:
       loginadd()
     if anvil.users.get_user()['setup_complete'] is None:
-      open_form('newuser')
+      open_form('newpage')
     elif anvil.users.get_user()['setup_complete'] is True:
       if anvil.users.get_user()['role'] == 'Student':
-        open_form('menu.stupage')
+        open_form('stupage')
       elif anvil.users.get_user()['role'] == 'Lecturer':
-        open_form('menu.lecpage')
+        open_form('lecpage')

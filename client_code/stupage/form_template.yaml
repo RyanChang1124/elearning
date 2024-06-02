@@ -53,5 +53,5 @@ components:
       type: Label
       layout_properties: {grid_position: 'NGOXGV,TUSHAK'}
   - name: repeating_panel_1
-    properties: {item_template: menu.stupage.ItemTemplate1}
+    properties: {item_template: stupage.ItemTemplate1}
     type: RepeatingPanel
