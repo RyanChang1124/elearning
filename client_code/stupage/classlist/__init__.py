@@ -18,8 +18,7 @@ class classlist(classlistTemplate):
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    classcode = self.item['classcode']
-
+    print(self.item['classcode'])
     # Open the classroom's page and pass the classcode
-    anvil.open_form('stupage.classroompage', classcode=classcode)
+    anvil.open_form('stupage.classroompage', classid = self.item['classcode'])
   

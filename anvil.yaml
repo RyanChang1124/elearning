@@ -98,7 +98,7 @@ db_schema:
       type: number
     title: Classrooms
   studentsclasses:
-    client: none
+    client: full
     server: full
     columns:
     - name: student
@@ -110,5 +110,98 @@ db_schema:
     - name: studentsetup
       admin_ui: {width: 200, order: 2}
       type: bool
+    - name: perk
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: level
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: exp
+      admin_ui: {width: 200, order: 5}
+      type: number
     title: StudentsClasses
+  quizzes:
+    client: full
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: quizname
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: lecturer
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: creationdate
+      admin_ui: {width: 200, order: 3}
+      type: date
+    - name: starttime
+      admin_ui: {width: 200, order: 4}
+      type: datetime
+    - name: endtime
+      admin_ui: {width: 200, order: 5}
+      type: datetime
+    - name: classcode
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    title: Quizzes
+  quizcontent:
+    client: full
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: questionnum
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: optiona
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: optionb
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: optionc
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: optiond
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: image
+      admin_ui: {width: 200, order: 6}
+      type: media
+    - name: answer
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: time
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: questionweight
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: question
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: QuizContent
+  quizresult:
+    client: none
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: result
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: points
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: review
+      admin_ui: {width: 200, order: 3}
+      type: simpleObject
+    - name: student
+      admin_ui: {width: 200, order: 4}
+      type: string
+    title: QuizResult
 renamed: true

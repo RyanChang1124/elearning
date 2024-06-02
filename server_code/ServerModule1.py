@@ -18,6 +18,12 @@ import pandas as pd
 #   print("Hello, " + name + "!")
 #   return 42
 #
+import datetime
+
+@anvil.server.callable
+def get_current_time():
+    return datetime.datetime.now().timestamp()
+  
 @anvil.server.callable
 def metricdateincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
@@ -74,3 +80,6 @@ def getclasses(student_username):
             classes.append({'classroom': classroom_name, 'lecturer': lecturer_username, 'classcode': class_code})
     
     return classes
+
+
+    

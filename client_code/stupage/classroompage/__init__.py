@@ -10,11 +10,16 @@ from anvil.tables import app_tables
 
 
 class classroompage(classroompageTemplate):
-  def __init__(self,classcode, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
-    classroomname = anvil.server.call('returnclassname',classcode)
-    print(classroomname)
-    self.classname.text = classroomname
+  def __init__(self, classid, **properties):
+      # Set Form properties and Data Bindings.
+      classnow = classid
+      quizzes = app_tables.quizzes.search(classcode=classnow)
+      self.repeating_panel_1.items = quizzes
+      self.init_components(**properties)
+  
+      # Any code you write here will run before the form opens.
+      
+  
+      classroomname = anvil.server.call('returnclassname', classid)
+      print(classroomname)
+      self.classname.text = classroomname
