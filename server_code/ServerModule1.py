@@ -21,7 +21,9 @@ import pandas as pd
 @anvil.server.callable
 def metricdateincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
-  today = pd.to_datetime('today').normalize
+  today = pd.to_datetime('today')
+  today = today.date()
+  print(today)
   if today in dates:
     metric = app_tables.metrics.get(date=today)
     metric['NumberOfLogins'] += 1

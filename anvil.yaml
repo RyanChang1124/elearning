@@ -72,6 +72,6 @@ db_schema:
       type: number
     - name: date
       admin_ui: {width: 200, order: 0}
-      type: datetime
+      type: date
     title: Metrics
 renamed: true
