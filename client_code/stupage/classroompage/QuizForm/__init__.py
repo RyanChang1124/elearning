@@ -9,6 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import math
 import random
+import time
 
 class QuizForm(QuizFormTemplate):
     def __init__(self, quizcode, studentid, **properties):
@@ -41,8 +42,11 @@ class QuizForm(QuizFormTemplate):
         self.option_b.text = question['optionb']
         self.option_c.text = question['optionc']
         self.option_d.text = question['optiond']
-        if question['image']:
-            self.image.source = question['image']
+        if question['image'] is not None:
+          self.outlined_card_3.visible = True
+          self.image.source = question['image']
+        else:
+          self.outlined_card_3.visible = False 
 
         # Start the timer for this question
         time = question['time']
@@ -104,6 +108,17 @@ class QuizForm(QuizFormTemplate):
                 score += self.level  # Modify this to suit your needs
             # Round the score to the nearest integer
             score = round(score)
+            self.outlined_card_1.visible = False
+            self.outlined_card_2.visible = False
+            self.outlined_card_3.visible = False
+            self.outlined_card_6.visible = True
+            self.message_label.text = f"Correct! You gained {score} points!"
+            time.sleep(2)
+            self.outlined_card_1.visible = True
+            self.outlined_card_2.visible = True
+            self.outlined_card_3.visible = True
+            self.outlined_card_6.visible = False
+            self.message_label.text = " "
             # Add the score to the total score
             self.score += score
             # Increase the streak of correct answers
@@ -116,6 +131,17 @@ class QuizForm(QuizFormTemplate):
                 self.current_question_index -= 1
             else:
                 # Reset the streak of correct answers
+                self.outlined_card_1.visible = False
+                self.outlined_card_2.visible = False
+                self.outlined_card_3.visible = False
+                self.outlined_card_6.visible = True
+                self.message_label.text = "Incorrent Answer :( "
+                time.sleep(2)
+                self.outlined_card_1.visible = True
+                self.outlined_card_2.visible = True
+                self.outlined_card_3.visible = True
+                self.outlined_card_6.visible = False
+                self.message_label.text = " "
                 self.correct_streak = 0
 
         # Update the score label
