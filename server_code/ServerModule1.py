@@ -36,8 +36,17 @@ def metricdateincrement():
 def checkvalueusers(value):
   return [r[value] for r in app_tables.users.search()]
 @anvil.server.callable
+
 def newuservalue(column,value):
   anvil.users.get_user()[column] = value
+
+@anvil.server.callable
+def returnclassname(classcode):
+  class_row = app_tables.classrooms.get(classcode=classcode)
+  if class_row is not None:
+      # Get the class name
+      class_name = class_row['classroom']
+      return class_name
 
 @anvil.server.callable
 def getclasses(student_username):
@@ -59,8 +68,9 @@ def getclasses(student_username):
             # Get the classroom name and lecturer username
             classroom_name = classroom_row['classroom']
             lecturer_username = classroom_row['username']
+            class_code = classroom_row['classcode']
             
             # Add the classroom information to the list
-            classes.append({'classroom': classroom_name, 'lecturer': lecturer_username})
+            classes.append({'classroom': classroom_name, 'lecturer': lecturer_username, 'classcode': class_code})
     
     return classes

@@ -1,0 +1,53 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'WCSBNB,CNBSCD'}
+    components:
+    - name: classname
+      properties: {align: center, font_size: 25, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SBAEEF,HAJULY'}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'RURKFC,YUWNJS'}
+    components:
+    - name: label_1
+      properties: {text: Quizzes}
+      type: Label
+      layout_properties: {grid_position: 'HDBOJX,QXXQBU'}
+    - name: repeating_panel_1
+      properties: {item_template: stupage.classroompage.ItemTemplate2}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'RGGYYF,NDXOCD'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: label_3
+    properties: {text: Classroom}
+    type: Label
+    layout_properties: {}
+  - name: button_2
+    properties: {text: Quiz}
+    type: Button
+    layout_properties: {}
+  - name: button_1
+    properties: {text: Materials}
+    type: Button
+    layout_properties: {}
+- name: label_2
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}
