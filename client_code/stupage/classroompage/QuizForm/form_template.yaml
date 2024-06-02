@@ -101,6 +101,9 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: user
+    properties: {}
+    type: Label
   - name: quizname
     properties: {}
     type: Label

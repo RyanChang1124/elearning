@@ -24,6 +24,7 @@ class QuizForm(QuizFormTemplate):
 
         # Retrieve the student's perk
         self.student = app_tables.studentsclasses.get(student=studentid)
+        self.user.text = self.student['student']
         self.perk = self.student['perk']
         self.level = self.student['level']
 
@@ -48,9 +49,9 @@ class QuizForm(QuizFormTemplate):
         if self.perk == 'time':
             # The student has the 'time' perk, so increase the time by a certain amount
             time += self.level  # Modify this to suit your needs
-        self.start_time = anvil.server.call('get_current_time')
-        self.time_remaining = question['time']
+        self.time_remaining = time
         self.timeleft.text = str(self.time_remaining)
+        self.start_time = self.time_remaining
         self.timer_1.interval = 1
         self.timer_1.enabled = True
 
@@ -91,7 +92,7 @@ class QuizForm(QuizFormTemplate):
         question = self.questions[self.current_question_index]
         correct_answer = question['answer']
         question_weight = question['questionweight']
-        elapsed_time = anvil.server.call('get_current_time') - self.start_time
+        elapsed_time = self.start_time - self.time_remaining
         total_time = question['time']
 
         if answer == correct_answer:
