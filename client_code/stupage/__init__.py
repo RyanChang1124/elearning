@@ -15,3 +15,7 @@ class stupage(stupageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    student_username = anvil.users.get_user('username')
+    classes = anvil.server.call('getclasses', student_username )
+    print(classes)
+    self.repeating_panel_1.items = classes

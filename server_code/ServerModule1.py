@@ -38,3 +38,29 @@ def checkvalueusers(value):
 @anvil.server.callable
 def newuservalue(column,value):
   anvil.users.get_user()[column] = value
+
+@anvil.server.callable
+def getclasses(student_username):
+    # Get the username for the student
+    user_row = anvil.users.get_user()['username']
+    
+    # Get the enrollments for the student
+    enrollments = app_tables.studentsclasses.search(student=user_row)
+    
+    classes = []
+    for enrollment in enrollments:
+        # Get the classcode from the enrollment
+        classcode = enrollment['classcode']
+        
+        # Get the corresponding classroom
+        classroom_row = app_tables.classrooms.get(classcode=classcode)
+        
+        if classroom_row is not None:
+            # Get the classroom name and lecturer username
+            classroom_name = classroom_row['classroom']
+            lecturer_username = classroom_row['username']
+            
+            # Add the classroom information to the list
+            classes.append({'classroom': classroom_name, 'lecturer': lecturer_username})
+    
+    return classes

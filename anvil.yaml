@@ -5,7 +5,7 @@ services:
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
   client_config: {mfa_timeout_days: 30, require_secure_passwords: true, use_email: true,
-    allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
+    allow_remember_me: false, allow_signup: true, enable_automatically: true, confirm_email: false,
     require_mfa: false, remember_me_days: 30, use_google: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
@@ -65,6 +65,9 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
+    - name: email_confirmation_key
+      admin_ui: {width: 200}
+      type: string
     title: Users
   metrics:
     client: none
@@ -77,5 +80,32 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: date
     title: Metrics
-  classrooms: {title: Classrooms}
+  classrooms:
+    client: none
+    server: full
+    columns:
+    - name: classroom
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: username
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: subject
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: classcode
+      admin_ui: {width: 200, order: 3}
+      type: number
+    title: Classrooms
+  studentsclasses:
+    client: none
+    server: full
+    columns:
+    - name: student
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: classcode
+      admin_ui: {width: 200, order: 1}
+      type: number
+    title: StudentsClasses
 renamed: true

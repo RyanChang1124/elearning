@@ -59,3 +59,5 @@ components:
   - name: repeating_panel_1
     properties: {item_template: stupage.ItemTemplate1}
     type: RepeatingPanel
+    data_bindings:
+    - {property: items, code: 'self.item[''classes'']', writeback: false}

@@ -1,15 +1,22 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  data_bindings:
+  - {property: item, code: 'self.item[''getclasses'']', writeback: false}
 components:
 - name: classroom
-  properties: {}
+  properties: {text: ''}
   type: Label
-  layout_properties: {grid_position: 'HTUQYB,PBVDQB'}
+  layout_properties: {grid_position: 'XXNTLH,TVGTNE'}
+  data_bindings:
+  - {property: text, code: 'self.item[''classroom'']', writeback: false}
 - name: lecturer
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'HTUQYB,TUDZTA'}
-- name: enterclass
-  properties: {text: Enter, role: outlined-button}
+  layout_properties: {grid_position: 'XXNTLH,NUVYFD'}
+  data_bindings:
+  - {property: text, code: 'self.item[''lecturer'']', writeback: false}
+- name: enter
+  properties: {text: Enter}
   type: Button
-  layout_properties: {grid_position: 'HTUQYB,VTAPKR'}
+  layout_properties: {grid_position: 'XXNTLH,JVAXDP'}
