@@ -6,12 +6,12 @@ components:
 - name: outlined_card_1
   properties: {role: outlined-card, col_widths: '{"WLXEZT":50,"IINOAT":10,"CYJEAH":45,"LNVSNZ":15}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'FJZHHX,UVZXGE'}
+  layout_properties: {grid_position: 'QHSXWY,JAZDQT'}
   components:
   - name: classroom
     properties: {text: ''}
     type: Label
-    layout_properties: {grid_position: 'BHIZON,WLXEZT EXPAPL,CYJEAH MPDNAS,KSCWVL'}
+    layout_properties: {grid_position: 'BHIZON,WLXEZT EXPAPL,CYJEAH'}
     data_bindings:
     - {property: text, code: '''Class: '' + self.item[''classroom'']', writeback: false}
   - name: outlined_button_1

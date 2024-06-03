@@ -12,11 +12,12 @@ from anvil.tables import app_tables
 class stupage(stupageTemplate):
   def __init__(self, **properties):
     # Any code you write here will run before the form opens.
-    student_username = anvil.users.get_user('username')
+    student_username = anvil.users.get_user()['username']
     classes = anvil.server.call('getclasses', student_username )
     print(classes)
     self.repeating_panel_1.items = classes
-    self.student.text = anvil.users.get_user('username')
+    print(student_username)
+    self.student.text = (f'Welcome back, {student_username}.')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

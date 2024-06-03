@@ -7,18 +7,24 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+
 import math
 import random
 import time
-
+numofq = None
+correctq = 0
+quizcoderem = None
 class QuizForm(QuizFormTemplate):
     def __init__(self, quizcode, studentid, **properties):
+        global numofq
+        global quizcoderem
+        quizcoderem = quizcode
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-
+      
         # Retrieve the quiz data
         self.questions = app_tables.quizcontent.search(quizcode=quizcode)
-
+        numofq = len(self.questions)
         # Initialize the score and the streak of correct answers
         self.score = 0
         self.correct_streak = 0
@@ -92,6 +98,7 @@ class QuizForm(QuizFormTemplate):
             self.end_quiz()
 
     def record_answer(self, answer):
+        global correctq
         # Record the user's answer
         question = self.questions[self.current_question_index]
         correct_answer = question['answer']
@@ -107,6 +114,7 @@ class QuizForm(QuizFormTemplate):
             if self.perk == 'conf' and self.correct_streak > 0:
                 score += self.level  # Modify this to suit your needs
             # Round the score to the nearest integer
+            correctq += 1
             score = round(score)
             self.outlined_card_1.visible = False
             self.outlined_card_2.visible = False
@@ -148,8 +156,20 @@ class QuizForm(QuizFormTemplate):
         self.score_label.text = "Score: " + str(self.score)
 
     def end_quiz(self):
+      global correctq
+      global numofq
+      global quizcoderem
       # End the quiz and display the user's score
       self.label_score.text = "Final score: " + str(self.score)
+      self.canswers.text = f"{correctq}/{numofq}"
+      self.accuracy.text = f"{(correctq/numofq)*100}%"
+      app_tables.quizresult.add_row(student=self.student['student'],
+                          result=correctq,
+                          correctpercentage= (correctq/numofq),
+                          quizcode=quizcoderem,
+                          points = self.score,
+                          perk=self.perk)
+      anvil.server.call('quizzesincrement')
       self.outlined_card_1.visible = False
       self.outlined_card_2.visible = False
       self.outlined_card_3.visible = False      
@@ -169,3 +189,10 @@ class QuizForm(QuizFormTemplate):
     def option_d_click(self, **event_args):
       """This method is called when the button is clicked"""
       self.option_button_click('d')
+
+    def exit_click(self, **event_args):
+      global quizcoderem
+      """This method is called when the button is clicked"""
+      classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
+      open_form('stupage.classroompage',classtoreturn)
+      

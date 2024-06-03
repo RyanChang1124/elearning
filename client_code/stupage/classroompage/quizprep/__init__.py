@@ -24,3 +24,9 @@ class quizprep(quizprepTemplate):
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.open_form('stupage.classroompage.QuizForm',quizcodenum,user)
+
+  def outlined_button_1_click(self, **event_args):
+    global quizcodenum
+    """This method is called when the button is clicked"""
+    classtoreturn = app_tables.quizzes.get(quizcode=quizcodenum)['classcode']
+    open_form('stupage.classroompage',classtoreturn)

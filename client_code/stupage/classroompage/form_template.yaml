@@ -44,14 +44,15 @@ components:
     type: Button
     layout_properties: {}
     event_bindings: {click: button_3_click}
-  - name: button_2
-    properties: {text: Quiz}
-    type: Button
-    layout_properties: {}
   - name: button_1
     properties: {text: Materials}
     type: Button
     layout_properties: {}
+  - name: outlined_button_1
+    properties: {text: Return To Menu, role: outlined-button}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: outlined_button_1_click}
 - name: label_2
   properties: {text: QLEARN}
   type: Label

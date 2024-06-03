@@ -91,6 +91,32 @@ components:
       properties: {align: center}
       type: Label
       layout_properties: {grid_position: 'MHHSZO,HMHAYF'}
+    - name: grid_panel_2
+      properties: {}
+      type: GridPanel
+      layout_properties: {grid_position: 'XQNXHH,PUJHYH'}
+      components:
+      - name: label_4
+        properties: {text: 'Correct Answers:'}
+        type: Label
+        layout_properties: {row: ZGNAKI, width_xs: 4, col_xs: 0}
+      - name: canswers
+        properties: {}
+        type: Label
+        layout_properties: {row: ZGNAKI, width_xs: 8, col_xs: 4}
+      - name: Accuracybar
+        properties: {text: 'Accuracy:'}
+        type: Label
+        layout_properties: {row: QVCDWL, width_xs: 4, col_xs: 0}
+      - name: accuracy
+        properties: {}
+        type: Label
+        layout_properties: {row: QVCDWL, width_xs: 8, col_xs: 4}
+    - name: exit
+      properties: {text: Exit, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'UIXSJR,MOWIBO'}
+      event_bindings: {click: exit_click}
   - name: timer_1
     properties: {interval: 1}
     type: Timer

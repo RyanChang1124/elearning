@@ -46,6 +46,7 @@ components:
     properties: {text: BACK, role: outlined-button}
     type: Button
     layout_properties: {}
+    event_bindings: {click: outlined_button_1_click}
 - name: label_1
   properties: {text: QLEARN}
   type: Label

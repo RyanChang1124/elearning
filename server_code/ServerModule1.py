@@ -39,10 +39,25 @@ def metricdateincrement():
     NumberOfLogins= 1)
 
 @anvil.server.callable
-def checkvalueusers(value):
-  return [r[value] for r in app_tables.users.search()]
-@anvil.server.callable
+def quizzesincrement():
+  dates = [r['date'] for r in app_tables.metrics.search()]
+  today = pd.to_datetime('today')
+  today = today.date()
+  print(today)
+  metric = app_tables.metrics.get(date=today)
+  if today in dates:
+    if metric['quizzescomplete'] is not None:    
+      metric['quizzescomplete'] += 1
+    else:
+      metric['quizzescomplete'] = 1
 
+
+
+@anvil.server.callable
+def checkvalueusers(value):
+   return [r[value] for r in app_tables.users.search()]
+  
+@anvil.server.callable
 def newuservalue(column,value):
   anvil.users.get_user()[column] = value
 

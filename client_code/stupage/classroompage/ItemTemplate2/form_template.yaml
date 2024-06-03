@@ -13,7 +13,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''quizname'']', writeback: false}
   - name: due
-    properties: {text: 'Due:'}
+    properties: {text: 'Due:', bold: true}
     type: Label
     layout_properties: {grid_position: 'MCOOTP,OOMXBL'}
   - name: deadline

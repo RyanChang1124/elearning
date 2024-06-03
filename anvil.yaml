@@ -71,7 +71,7 @@ db_schema:
       type: string
     title: Users
   metrics:
-    client: none
+    client: full
     server: full
     columns:
     - name: NumberOfLogins
@@ -80,6 +80,9 @@ db_schema:
     - name: date
       admin_ui: {width: 200, order: 0}
       type: date
+    - name: quizzescomplete
+      admin_ui: {width: 200, order: 2}
+      type: number
     title: Metrics
   classrooms:
     client: none
@@ -93,6 +96,12 @@ db_schema:
       type: string
     - name: classcode
       admin_ui: {width: 200, order: 3}
+      type: number
+    - name: baselevel
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: levelincrement
+      admin_ui: {width: 200, order: 5}
       type: number
     title: Classrooms
   studentsclasses:
@@ -183,7 +192,7 @@ db_schema:
       type: string
     title: QuizContent
   quizresult:
-    client: none
+    client: full
     server: full
     columns:
     - name: quizcode
@@ -195,11 +204,14 @@ db_schema:
     - name: points
       admin_ui: {width: 200, order: 2}
       type: number
-    - name: review
-      admin_ui: {width: 200, order: 3}
-      type: simpleObject
     - name: student
       admin_ui: {width: 200, order: 4}
       type: string
+    - name: perk
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: correctpercentage
+      admin_ui: {width: 200, order: 6}
+      type: number
     title: QuizResult
 renamed: true
