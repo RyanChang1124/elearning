@@ -92,10 +92,10 @@ def getlectclasses(lecturer_username):
     classes = []
     for enrollment in enrollments:
         # Get the classcode from the enrollment
-        classcode = enrollment['classcode']
+        name = enrollment['username']
         
         # Get the corresponding classroom
-        classroom_row = app_tables.classrooms.get(classcode=classcode)
+        classroom_row = app_tables.classrooms.get(username=name)
         
         if classroom_row is not None:
             # Get the classroom name and classroomocode
