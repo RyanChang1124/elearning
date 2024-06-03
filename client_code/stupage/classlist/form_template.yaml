@@ -24,4 +24,4 @@ components:
     type: Label
     layout_properties: {grid_position: 'BHIZON,WLXEZT EXPAPL,LNVSNZ'}
     data_bindings:
-    - {property: text, code: '''Code: '' +self.item[''classcode'']', writeback: false}
+    - {property: text, code: '''Code: '' +str(self.item[''lecturer''])', writeback: false}
