@@ -1,0 +1,40 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SFESHF,WVRVWV'}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JQYPFY,CINRXC'}
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: stupage.classroompage.materials.ItemTemplate3}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'LKNLQH,NVHCTX'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: Materials}
+    type: Label
+    layout_properties: {}
+  - name: button_1
+    properties: {text: Main Menu}
+    type: Button
+    layout_properties: {}
+- name: label_1
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}

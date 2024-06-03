@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate2Template
+from ._anvil_designer import studentprofileTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -7,15 +7,18 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+classnow = None
 
-
-class ItemTemplate2(ItemTemplate2Template):
-  def __init__(self, **properties):
+class studentprofile(studentprofileTemplate):
+  def __init__(self,classid, **properties):
+    global classnow
+    classnow = classid
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
-  def enterquiz_click(self, **event_args):
+  def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('stupage.classroompage.quizprep',self.item['quizcode'],anvil.users.get_user()['username'])
+    global classnow
+    open_form('stupage.classroompage',classid = classnow)

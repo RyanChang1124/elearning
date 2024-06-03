@@ -16,8 +16,8 @@ class stupage(stupageTemplate):
     classes = anvil.server.call('getclasses', student_username )
     print(classes)
     self.repeating_panel_1.items = classes
+    self.student.text = anvil.users.get_user('username')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.student.text = anvil.users.get_user('username')
 
     

@@ -1,0 +1,125 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {grid_position: 'TCHNGD,JIFSAV'}
+    components:
+    - name: outlined_card_1
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {width: 176}
+      components:
+      - name: image_1
+        properties: {height: 127}
+        type: Image
+        layout_properties: {grid_position: 'PIZCYG,ONQZLC'}
+      - name: file_loader_1
+        properties: {text: New Profile Picture}
+        type: FileLoader
+        layout_properties: {grid_position: 'JODHNN,QUTCCK'}
+    - name: outlined_card_2
+      properties: {role: outlined-card, col_widths: '{"IEKHOZ":15,"RNNYOB":45,"PDSEHU":15,"BVZJRV":45,"DQXMQM":15,"ZKJCBO":45,"KKTTWZ":15,"SVNYAG":45}'}
+      type: ColumnPanel
+      layout_properties: {width: 764}
+      components:
+      - name: Name
+        properties: {text: 'Name:'}
+        type: Label
+        layout_properties: {grid_position: 'CTNXEU,IEKHOZ'}
+      - name: namebar
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'CTNXEU,RNNYOB'}
+      - name: Username
+        properties: {text: 'Username:'}
+        type: Label
+        layout_properties: {grid_position: 'HNBGGL,PDSEHU'}
+      - name: userbar
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'HNBGGL,BVZJRV'}
+      - name: QuizzesComplete
+        properties: {text: 'Quizzes Complete:'}
+        type: Label
+        layout_properties: {grid_position: 'GOXEHG,DQXMQM'}
+      - name: quizcompletebar
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'GOXEHG,ZKJCBO'}
+      - name: TotalPoints
+        properties: {text: 'Total Points:'}
+        type: Label
+        layout_properties: {grid_position: 'LHWJBL,KKTTWZ'}
+      - name: totalpointbar
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'LHWJBL,SVNYAG'}
+      - name: outlined_button_1
+        properties: {text: 'Log Out?', role: outlined-button}
+        type: Button
+        layout_properties: {grid_position: 'LITXXT,UGJKPA'}
+  - name: outlined_card_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QIMWXZ,YVRNCH'}
+    components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'UDEILH,YZBKAW'}
+      components:
+      - name: image_2
+        properties: {height: 115}
+        type: Image
+        layout_properties: {width: 117}
+      - name: label_3
+        properties: {}
+        type: Label
+    - name: outlined_card_4
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'UDEILH,HSCBDF'}
+      components:
+      - name: label_4
+        properties: {text: 'Level:'}
+        type: Label
+        layout_properties: {grid_position: 'IEYBFO,RZMSFK'}
+      - name: label_8
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'IEYBFO,ASBLTV'}
+      - name: label_5
+        properties: {text: 'Points to next level:'}
+        type: Label
+        layout_properties: {grid_position: 'MWXVGJ,UKLRIZ'}
+      - name: label_9
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'MWXVGJ,CXLUMF'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: Student Profile}
+    type: Label
+    layout_properties: {}
+  - name: button_1
+    properties: {text: Main Menu}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
+- name: label_1
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}

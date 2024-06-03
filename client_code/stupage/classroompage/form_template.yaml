@@ -39,6 +39,11 @@ components:
     properties: {text: Classroom}
     type: Label
     layout_properties: {}
+  - name: button_3
+    properties: {text: Profile}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: button_3_click}
   - name: button_2
     properties: {text: Quiz}
     type: Button

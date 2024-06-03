@@ -13,7 +13,7 @@ components:
     type: Label
     layout_properties: {}
   - name: button_3
-    properties: {text: Contact}
+    properties: {text: Materials}
     type: Button
     layout_properties: {}
   - name: button_4
