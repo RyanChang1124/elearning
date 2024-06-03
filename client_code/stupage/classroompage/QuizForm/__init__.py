@@ -58,7 +58,8 @@ class QuizForm(QuizFormTemplate):
         time = question['time']
         if self.perk == 'time':
             # The student has the 'time' perk, so increase the time by a certain amount
-            time += self.level  # Modify this to suit your needs
+            time += time * (1+(0.1 * self.level)) 
+            time = round(time) # Modify this to suit your needs
         self.time_remaining = time
         self.timeleft.text = str(self.time_remaining)
         self.start_time = self.time_remaining
@@ -112,7 +113,7 @@ class QuizForm(QuizFormTemplate):
             score = question_weight * (1 - elapsed_time / total_time)
             # If the student has the 'conf' perk, increase their score by a bonus amount
             if self.perk == 'conf' and self.correct_streak > 0:
-                score += self.level  # Modify this to suit your needs
+                score += 0.1 * self.level  # Modify this to suit your needs
             # Round the score to the nearest integer
             correctq += 1
             score = round(score)
@@ -137,6 +138,19 @@ class QuizForm(QuizFormTemplate):
                 # The student has the 'chance' perk, and they're lucky
                 # Give them a chance to retry the question
                 self.current_question_index -= 1
+                # Reset the streak of correct answers
+                self.outlined_card_1.visible = False
+                self.outlined_card_2.visible = False
+                self.outlined_card_3.visible = False
+                self.outlined_card_6.visible = True
+                self.message_label.text = "Wrong answer, but heres your lucky second chance :) "
+                time.sleep(2)
+                self.outlined_card_1.visible = True
+                self.outlined_card_2.visible = True
+                self.outlined_card_3.visible = True
+                self.outlined_card_6.visible = False
+                self.message_label.text = " "
+                self.correct_streak = 0
             else:
                 # Reset the streak of correct answers
                 self.outlined_card_1.visible = False

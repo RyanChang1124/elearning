@@ -16,11 +16,16 @@ class quizprep(quizprepTemplate):
     global user
     user = username
     quizcodenum = quizcode
+    
+    
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
     # Any code you write here will run before the form opens.
-
+    quiznaming = app_tables.quizzes.get(quizcode=quizcodenum)['quizname']
+    self.quizname.text = quiznaming
+    self.questions = app_tables.quizcontent.search(quizcode=quizcode)
+    numofq = len(self.questions)
+    self.quiznum.text = numofq
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.open_form('stupage.classroompage.QuizForm',quizcodenum,user)
