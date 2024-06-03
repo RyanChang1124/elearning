@@ -19,9 +19,9 @@ components:
     type: Button
     layout_properties: {grid_position: 'BHIZON,IINOAT'}
     event_bindings: {click: outlined_button_1_click}
-  - name: lecturer
+  - name: classcode
     properties: {}
     type: Label
     layout_properties: {grid_position: 'BHIZON,WLXEZT EXPAPL,LNVSNZ'}
     data_bindings:
-    - {property: text, code: '''Lecturer: '' +self.item[''lecturer'']', writeback: false}
+    - {property: text, code: '''Code: '' +self.item[''classcode'']', writeback: false}

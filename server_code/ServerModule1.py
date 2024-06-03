@@ -81,5 +81,29 @@ def getclasses(student_username):
     
     return classes
 
-
+@anvil.server.callable
+def getlectclasses(lecturer_username):
+    # Get the username for the lecturer
+    user_row = anvil.users.get_user()['username']
+    
+    # Get the enrollments for the student
+    enrollments = app_tables.classrooms.search(username=user_row)
+    
+    classes = []
+    for enrollment in enrollments:
+        # Get the classcode from the enrollment
+        classcode = enrollment['classcode']
+        
+        # Get the corresponding classroom
+        classroom_row = app_tables.classrooms.get(classcode=classcode)
+        
+        if classroom_row is not None:
+            # Get the classroom name and classroomocode
+            classroom_name = classroom_row['classroom']
+            class_code = classroom_row['classcode']
+            
+            # Add the classroom information to the list
+            classes.append({'classroom': classroom_name, 'classcode': class_code})
+    
+    return classes
     

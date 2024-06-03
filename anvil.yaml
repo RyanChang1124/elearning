@@ -90,9 +90,6 @@ db_schema:
     - name: username
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: subject
-      admin_ui: {width: 200, order: 2}
-      type: string
     - name: classcode
       admin_ui: {width: 200, order: 3}
       type: number

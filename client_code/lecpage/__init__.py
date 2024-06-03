@@ -11,6 +11,9 @@ from anvil.tables import app_tables
 
 class lecpage(lecpageTemplate):
   def __init__(self, **properties):
+    lecturer_username = anvil.users.get_user('username')
+    classes = anvil.server.call('getlectclasses', lecturer_username )
+    self.repeating_panel_1.items = classes
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
