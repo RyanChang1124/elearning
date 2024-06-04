@@ -127,16 +127,15 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: label_2
+    properties: {text: Quiz}
+    type: Label
   - name: user
     properties: {}
     type: Label
   - name: quizname
     properties: {}
     type: Label
-  - name: label_2
-    properties: {text: Quiz}
-    type: Label
-    layout_properties: {}
 - name: label_1
   properties: {text: QLEARN}
   type: Label
