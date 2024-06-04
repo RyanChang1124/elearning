@@ -183,6 +183,9 @@ class QuizForm(QuizFormTemplate):
                           quizcode=quizcoderem,
                           points = self.score,
                           perk=self.perk)
+      self.student['level']+=self.score
+      self.student['completedquiz']+=1
+      self.studentpoints = self.student['level']
       anvil.server.call('quizzesincrement')
       self.outlined_card_1.visible = False
       self.outlined_card_2.visible = False

@@ -15,7 +15,11 @@ class studentprofile(studentprofileTemplate):
     classnow = classid
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.student = app_tables.studentsclasses.get(student=(anvil.users.get_user()['username']))
+    self.namebar.text = anvil.users.get_user()['username']
+    self.userbar = self.student['student']
+    self.quizcompletebar = self.student['completedquiz']
+    self.totalpointbar = self.student['exp']
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
