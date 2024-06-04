@@ -34,6 +34,7 @@ class newpage(newpageTemplate):
       try:
         self.outlined_card_1.visible = False
         self.outlined_card_2.visible = True
+        newusername = checkusername
       except ValueError:
         alert("Something went wrong, try again?")
 
