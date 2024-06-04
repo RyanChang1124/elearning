@@ -36,3 +36,8 @@ class classroompage(classroompageTemplate):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('stupage')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    global classnow
+    open_form('stupage.classroompage.materials',classid = classnow)

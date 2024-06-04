@@ -85,7 +85,7 @@ db_schema:
       type: number
     title: Metrics
   classrooms:
-    client: none
+    client: full
     server: full
     columns:
     - name: classroom
@@ -128,6 +128,9 @@ db_schema:
       type: number
     - name: completedquiz
       admin_ui: {width: 200, order: 6}
+      type: number
+    - name: totalpoints
+      admin_ui: {width: 200, order: 7}
       type: number
     title: StudentsClasses
   quizzes:
@@ -220,4 +223,27 @@ db_schema:
       admin_ui: {width: 200, order: 6}
       type: number
     title: QuizResult
+  materials:
+    client: full
+    server: full
+    columns:
+    - name: materialcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: classcode
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: postdate
+      admin_ui: {width: 200, order: 2}
+      type: datetime
+    - name: title
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: desc
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: attachment
+      admin_ui: {width: 200, order: 5}
+      type: media
+    title: Materials
 renamed: true

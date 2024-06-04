@@ -38,5 +38,5 @@ class ItemTemplate2(ItemTemplate2Template):
     elif self.enterquiz.text == "Overdue":
       alert("Quiz is overdue!")
     elif self.enterquiz.text == "Results":
-      pass
+      open_form('stupage.classroompage.resultsboard',self.item['quizcode'],self.item['classcode'])
       

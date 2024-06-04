@@ -13,9 +13,10 @@ components:
     type: Label
     layout_properties: {}
   - name: button_3
-    properties: {text: Materials}
+    properties: {text: Join Classroom}
     type: Button
     layout_properties: {}
+    event_bindings: {click: button_3_click}
   - name: button_4
     properties: {text: Log Out}
     type: Button

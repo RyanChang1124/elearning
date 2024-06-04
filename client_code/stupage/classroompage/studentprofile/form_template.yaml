@@ -57,15 +57,20 @@ components:
     - name: flow_panel_2
       properties: {}
       type: FlowPanel
-      layout_properties: {grid_position: 'UDEILH,YZBKAW'}
+      layout_properties: {grid_position: 'UDEILH,YZBKAW ZDSZYA,SCEVPM'}
       components:
       - name: image_2
-        properties: {height: 115}
+        properties: {height: 76, display_mode: shrink_to_fit}
         type: Image
-        layout_properties: {width: 117}
+        layout_properties: {width: 79}
       - name: label_3
-        properties: {}
+        properties: {font_size: 25}
         type: Label
+        layout_properties: {}
+    - name: label_10
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'UDEILH,YZBKAW YDPXCB,TIYLWI'}
     - name: outlined_card_4
       properties: {role: outlined-card}
       type: ColumnPanel
@@ -80,13 +85,26 @@ components:
         type: Label
         layout_properties: {grid_position: 'IEYBFO,ASBLTV'}
       - name: label_5
-        properties: {text: 'Points to next level:'}
+        properties: {text: 'Cost for next level:'}
         type: Label
-        layout_properties: {grid_position: 'MWXVGJ,UKLRIZ'}
+        layout_properties: {grid_position: 'NYNNBV,TPORMK'}
       - name: label_9
         properties: {}
         type: Label
-        layout_properties: {grid_position: 'MWXVGJ,CXLUMF'}
+        layout_properties: {grid_position: 'NYNNBV,KRVYCA'}
+      - name: label_6
+        properties: {text: Available Points}
+        type: Label
+        layout_properties: {grid_position: 'WBZRPB,HKDGVC'}
+      - name: label_7
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'WBZRPB,ROJHZS'}
+      - name: outlined_button_2
+        properties: {text: Upgrade Perk, role: outlined-button}
+        type: Button
+        layout_properties: {grid_position: 'WZXZEA,QGICXT'}
+        event_bindings: {click: outlined_button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

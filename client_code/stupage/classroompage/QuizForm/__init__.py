@@ -183,7 +183,8 @@ class QuizForm(QuizFormTemplate):
                           quizcode=quizcoderem,
                           points = self.score,
                           perk=self.perk)
-      self.student['level']+=self.score
+      self.student['exp']+=self.score
+      self.student['totalpoints']+=self.score
       self.student['completedquiz']+=1
       self.studentpoints = self.student['level']
       anvil.server.call('quizzesincrement')
