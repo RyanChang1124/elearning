@@ -152,6 +152,9 @@ db_schema:
     - name: classcode
       admin_ui: {width: 200, order: 0.5}
       type: number
+    - name: available
+      admin_ui: {width: 200, order: 6}
+      type: bool
     title: Quizzes
   quizcontent:
     client: full
