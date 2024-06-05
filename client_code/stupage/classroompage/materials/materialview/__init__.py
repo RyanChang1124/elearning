@@ -12,8 +12,9 @@ import anvil.media
 class materialview(materialviewTemplate):
   def __init__(self,materialid, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
     self.materiallist = app_tables.materials.get(materialcode=materialid)
+    self.init_components(**properties)
+    
     if self.materiallist['attachment'] is not None:
       self.outlined_button_1.visible = True
       self.outlined_button_1.text = f"Download attachment: {self.materiallist['attachment'].name}"

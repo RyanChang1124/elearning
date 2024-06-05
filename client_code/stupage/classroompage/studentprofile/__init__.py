@@ -22,8 +22,8 @@ class studentprofile(studentprofileTemplate):
     self.userbar.text = self.student['student']
     self.quizcompletebar.text = self.student['completedquiz']
     self.totalpointbar.text = self.student['totalpoints']
-    self.label_8.text = self.student['exp']
-    self.label_4.text = self.student['level']
+    self.label_7.text = self.student['exp']
+    self.label_8.text = self.student['level']
     self.label_9.text = round(self.classinfo['baselevel']+(self.student['level']*self.classinfo['levelincrement']))
     if self.student['perk'] == 'time':
       self.image_2.source = "_/theme/icons8-time-100.png"
@@ -49,8 +49,8 @@ class studentprofile(studentprofileTemplate):
     if self.student['exp'] >= round(self.student['level']*self.classinfo['levelincrement']) and self.level < 10:
       self.student['level'] += 1
       self.student['exp'] -= round(self.student['level']*self.classinfo['levelincrement'])
-      self.label_8.text = self.student['exp']
-      self.label_4.text = self.student['level']
+      self.label_7.text = self.student['exp']
+      self.label_8.text = self.student['level']
       self.label_9.text = round(self.classinfo['baselevel']+(self.student['level']*self.classinfo['levelincrement']))
     elif self.student['exp'] < round(self.student['level']*self.classinfo['levelincrement']):
       alert("You do not have enough points!")
