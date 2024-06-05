@@ -56,4 +56,9 @@ class studentprofile(studentprofileTemplate):
       alert("You do not have enough points!")
     elif self.student['level'] >= 10:
       alert("You are at the maximum level!")
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.logout()
+    open_form('menu')
       

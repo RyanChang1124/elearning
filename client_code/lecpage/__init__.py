@@ -17,5 +17,5 @@ class lecpage(lecpageTemplate):
     print(classes)
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.lect.text = anvil.users.get_user()['username']
     # Any code you write here will run before the form opens.
