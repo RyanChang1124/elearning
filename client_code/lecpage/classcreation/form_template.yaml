@@ -7,7 +7,75 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: outlined_card_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'HLUXKL,BPIDVH'}
+    components:
+    - name: label_7
+      properties: {bold: true, text: Classroom Creation, align: center, font_size: 30}
+      type: Label
+      layout_properties: {grid_position: 'JUQDEG,SWYOZS'}
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'KSEJUC,KRSLXI'}
+    components:
+    - name: label_3
+      properties: {bold: true, text: 'Classroom name:'}
+      type: Label
+      layout_properties: {grid_position: 'AERNQC,TGEFHU'}
+    - name: classname
+      properties: {role: outlined, placeholder: '...'}
+      type: TextBox
+      layout_properties: {grid_position: 'VHZKGG,AVCVJY'}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ELOCJV,ZBDSRX'}
+    components:
+    - name: label_5
+      properties: {bold: true, text: Student Perks Parameters, font_size: 25}
+      type: Label
+      layout_properties: {grid_position: 'NGJQQH,VIBCON'}
+    - name: label_6
+      properties: {bold: true, text: 'Perk levelling base value:'}
+      type: Label
+      layout_properties: {grid_position: 'UXVANB,PAZRRV'}
+    - name: basevalue
+      properties: {role: outlined, text: '200', placeholder: '...', type: number}
+      type: TextBox
+      layout_properties: {grid_position: 'KCZJMO,YEFIBY'}
+    - name: label_4
+      properties: {bold: true, text: 'Perk levelling factor:'}
+      type: Label
+      layout_properties: {grid_position: 'HSCTZF,GLEDFC'}
+    - name: drop_down_1
+      properties: {}
+      type: DropDown
+      layout_properties: {grid_position: 'MGMHEJ,QUNEFF'}
+      data_bindings: []
+  - name: createclass
+    properties: {text: Create Your Class, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'JABOIF,SJBBIU'}
+    event_bindings: {click: createclass_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: Create a Classroom}
+    type: Label
+    layout_properties: {}
+  - name: outlined_button_1
+    properties: {text: Return, role: outlined-button}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: outlined_button_1_click}
+- name: label_1
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}

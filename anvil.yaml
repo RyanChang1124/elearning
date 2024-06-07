@@ -23,6 +23,147 @@ runtime_options:
   server_persist: true
 startup_form: null
 db_schema:
+  levelfactor:
+    client: search
+    server: full
+    columns:
+    - name: lvlfactor
+      admin_ui: {width: 200, order: 0}
+      type: number
+    title: levelfactor
+  quizcontent:
+    client: full
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: questionnum
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: optiona
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: optionb
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: optionc
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: optiond
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: image
+      admin_ui: {width: 200, order: 6}
+      type: media
+    - name: answer
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: time
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: questionweight
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: question
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: QuizContent
+  classrooms:
+    client: full
+    server: full
+    columns:
+    - name: classroom
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: username
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: classcode
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: baselevel
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: levelincrement
+      admin_ui: {width: 200, order: 5}
+      type: number
+    title: Classrooms
+  quizzes:
+    client: full
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: quizname
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: lecturer
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: creationdate
+      admin_ui: {width: 200, order: 3}
+      type: date
+    - name: starttime
+      admin_ui: {width: 200, order: 4}
+      type: datetime
+    - name: endtime
+      admin_ui: {width: 200, order: 5}
+      type: datetime
+    - name: classcode
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: available
+      admin_ui: {width: 200, order: 6}
+      type: bool
+    title: Quizzes
+  materials:
+    client: full
+    server: full
+    columns:
+    - name: materialcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: classcode
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: postdate
+      admin_ui: {width: 200, order: 2}
+      type: datetime
+    - name: title
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: desc
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: attachment
+      admin_ui: {width: 200, order: 5}
+      type: media
+    title: Materials
+  quizresult:
+    client: full
+    server: full
+    columns:
+    - name: quizcode
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: result
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: points
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: student
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: perk
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: correctpercentage
+      admin_ui: {width: 200, order: 6}
+      type: number
+    title: QuizResult
   users:
     client: none
     server: full
@@ -70,40 +211,6 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: Users
-  metrics:
-    client: full
-    server: full
-    columns:
-    - name: NumberOfLogins
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: date
-      admin_ui: {width: 200, order: 0}
-      type: date
-    - name: quizzescomplete
-      admin_ui: {width: 200, order: 2}
-      type: number
-    title: Metrics
-  classrooms:
-    client: full
-    server: full
-    columns:
-    - name: classroom
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: username
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: classcode
-      admin_ui: {width: 200, order: 3}
-      type: number
-    - name: baselevel
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: levelincrement
-      admin_ui: {width: 200, order: 5}
-      type: number
-    title: Classrooms
   studentsclasses:
     client: full
     server: full
@@ -133,117 +240,18 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: number
     title: StudentsClasses
-  quizzes:
+  metrics:
     client: full
     server: full
     columns:
-    - name: quizcode
-      admin_ui: {width: 200, order: 0}
-      type: number
-    - name: quizname
+    - name: NumberOfLogins
       admin_ui: {width: 200, order: 1}
-      type: string
-    - name: lecturer
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: creationdate
-      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: date
+      admin_ui: {width: 200, order: 0}
       type: date
-    - name: starttime
-      admin_ui: {width: 200, order: 4}
-      type: datetime
-    - name: endtime
-      admin_ui: {width: 200, order: 5}
-      type: datetime
-    - name: classcode
-      admin_ui: {width: 200, order: 0.5}
-      type: number
-    - name: available
-      admin_ui: {width: 200, order: 6}
-      type: bool
-    title: Quizzes
-  quizcontent:
-    client: full
-    server: full
-    columns:
-    - name: quizcode
-      admin_ui: {width: 200, order: 0}
-      type: number
-    - name: questionnum
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: optiona
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: optionb
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: optionc
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: optiond
-      admin_ui: {width: 200, order: 5}
-      type: string
-    - name: image
-      admin_ui: {width: 200, order: 6}
-      type: media
-    - name: answer
-      admin_ui: {width: 200, order: 7}
-      type: string
-    - name: time
-      admin_ui: {width: 200, order: 8}
-      type: number
-    - name: questionweight
-      admin_ui: {width: 200, order: 9}
-      type: number
-    - name: question
-      admin_ui: {order: 1.5, width: 200}
-      type: string
-    title: QuizContent
-  quizresult:
-    client: full
-    server: full
-    columns:
-    - name: quizcode
-      admin_ui: {width: 200, order: 0}
-      type: number
-    - name: result
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: points
+    - name: quizzescomplete
       admin_ui: {width: 200, order: 2}
       type: number
-    - name: student
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: perk
-      admin_ui: {width: 200, order: 5}
-      type: string
-    - name: correctpercentage
-      admin_ui: {width: 200, order: 6}
-      type: number
-    title: QuizResult
-  materials:
-    client: full
-    server: full
-    columns:
-    - name: materialcode
-      admin_ui: {width: 200, order: 0}
-      type: number
-    - name: classcode
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: postdate
-      admin_ui: {width: 200, order: 2}
-      type: datetime
-    - name: title
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: desc
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: attachment
-      admin_ui: {width: 200, order: 5}
-      type: media
-    title: Materials
+    title: Metrics
 renamed: true
