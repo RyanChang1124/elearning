@@ -13,6 +13,10 @@ class lecclasspage(lecclasspageTemplate):
   def __init__(self,classid, **properties):
     # Set Form properties and Data Bindings.
     self.label_3.text = app_tables.classrooms.get(classcode=classid)['classroom']
+    global classnow
+    classnow = classid
+    quizzes = app_tables.quizzes.search(tables.order_by("endtime",ascending=False),classcode=classnow)
+    self.repeating_panel_1.items = quizzes
     self.init_components(**properties)
     
 
