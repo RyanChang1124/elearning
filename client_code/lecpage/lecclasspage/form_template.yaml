@@ -7,7 +7,52 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'EECMKN,JGESJI'}
+    components:
+    - name: label_3
+      properties: {align: center, bold: true, font_size: 30}
+      type: Label
+      layout_properties: {grid_position: 'AFRPTG,SHTQQM'}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PKKBMZ,EHNWJW'}
+    components:
+    - name: Quizzes
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'XYLLFA,EZRJCS'}
+  - name: outlined_card_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'KHYVGU,VROAYG'}
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: lecpage.lecclasspage.ItemTemplate5}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'ZCSHZN,QKFVHQ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: Classroom}
+    type: Label
+    layout_properties: {}
+  - name: Materials
+    properties: {text: Materials}
+    type: Button
+    layout_properties: {}
+  - name: log
+    properties: {text: Log Out}
+    type: Button
+    layout_properties: {}
+- name: label_1
+  properties: {text: QLEARN}
+  type: Label
+  layout_properties: {slot: title}
