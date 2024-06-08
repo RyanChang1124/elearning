@@ -15,3 +15,11 @@ class ItemTemplate6(ItemTemplate6Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.raise_event('x-newqedit',qnum=self.item['questionnum'])
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.raise_event('x-delnum',qnum=self.item['questionnum'])

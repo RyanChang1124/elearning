@@ -22,8 +22,16 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'HPGIPX,CFCURD'}
       data_bindings: []
+    - name: label_8
+      properties: {text: 'Deadline:'}
+      type: Label
+      layout_properties: {grid_position: 'DGYDTV,FHLDKG'}
+    - name: date_picker_1
+      properties: {pick_time: true}
+      type: DatePicker
+      layout_properties: {grid_position: 'JDDZIH,YOSLGW'}
   - name: outlined_card_2
-    properties: {role: outlined-card, col_widths: '{"RHADCJ":10,"TDVNMP":25,"XIMYPT":10,"SRUIMB":50,"YIVAEH":15,"NQOQFV":15,"QBNZES":15,"BJUUEI":15}'}
+    properties: {role: outlined-card, col_widths: '{"RHADCJ":10,"XIMYPT":10,"SRUIMB":50,"YIVAEH":15,"NQOQFV":15,"QBNZES":15,"BJUUEI":15,"JODQXD":15,"DSJBHM":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'SOSRKH,JBROHP'}
     components:
@@ -32,9 +40,9 @@ components:
       type: Label
       layout_properties: {grid_position: 'AMXPRX,RHADCJ'}
     - name: qnum
-      properties: {role: outlined, placeholder: Question Number, type: number}
-      type: TextBox
-      layout_properties: {grid_position: 'AMXPRX,TDVNMP'}
+      properties: {}
+      type: DropDown
+      layout_properties: {grid_position: 'AMXPRX,RKJXGN'}
     - name: label_5
       properties: {text: 'Answer:'}
       type: Label
@@ -43,6 +51,19 @@ components:
       properties: {}
       type: DropDown
       layout_properties: {grid_position: 'AMXPRX,SRUIMB'}
+    - name: outlined_card_4
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'DAHXUX,YANHXU'}
+      components:
+      - name: Questionprompt
+        properties: {role: outlined}
+        type: TextBox
+        layout_properties: {grid_position: 'DGXVOM,WCNYKY'}
+      - name: image_1
+        properties: {}
+        type: Image
+        layout_properties: {grid_position: 'CYRLRQ,IHLZLX'}
     - name: a
       properties: {role: outlined, placeholder: Answer A}
       type: TextBox
@@ -64,7 +85,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'KLIVND,YIVAEH'}
     - name: score
-      properties: {role: outlined, type: number, placeholder: '...'}
+      properties: {role: outlined, type: number, placeholder: '...', text: '30'}
       type: TextBox
       layout_properties: {grid_position: 'KLIVND,NQOQFV'}
       data_bindings: []
@@ -73,13 +94,19 @@ components:
       type: Label
       layout_properties: {grid_position: 'KLIVND,QBNZES'}
     - name: time
-      properties: {role: outlined, placeholder: '...'}
+      properties: {role: outlined, placeholder: '...', text: '30', type: number}
       type: TextBox
       layout_properties: {grid_position: 'KLIVND,BJUUEI'}
+    - name: file_loader_1
+      properties: {text: Upload Image, file_types: '', icon: 'fa:upload'}
+      type: FileLoader
+      layout_properties: {grid_position: 'BQAEEL,JODQXD'}
+      data_bindings: []
     - name: submit
       properties: {text: Submit, role: outlined-button}
       type: Button
       layout_properties: {grid_position: 'BQAEEL,DSJBHM'}
+      event_bindings: {click: submit_click}
   - name: outlined_card_3
     properties: {role: outlined-card}
     type: ColumnPanel
@@ -89,6 +116,14 @@ components:
       properties: {item_template: lecpage.lecclasspage.quizedit.ItemTemplate6}
       type: RepeatingPanel
       layout_properties: {grid_position: 'RKWSNS,PFTGCQ'}
+    - name: check_box_1
+      properties: {text: 'Activate Quiz?'}
+      type: CheckBox
+      layout_properties: {grid_position: 'IIQVLI,OVHFTI'}
+    - name: outlined_button_2
+      properties: {text: Save, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'IIQVLI,YSAPXU'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
