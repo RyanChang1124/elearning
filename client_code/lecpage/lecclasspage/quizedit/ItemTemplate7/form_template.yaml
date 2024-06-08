@@ -6,55 +6,59 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'STQCMJ,CLTMPQ'}
   components:
-  - name: label_1
-    properties: {text: 'Question Number:'}
-    type: Label
-    layout_properties: {grid_position: 'NKKBEM,TGAJJQ'}
-  - name: quesnum
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'NKKBEM,WPWZVT'}
   - name: label_3
     properties: {text: Correct Answer}
     type: Label
     layout_properties: {grid_position: 'NKKBEM,TSWVOA'}
-  - name: correctanswer
-    properties: {}
+  - name: drop_down_answer
+    properties:
+      items: ['self.drop_down_answer.items = [''a'', ''b'', ''c'', ''d'']']
     type: DropDown
     layout_properties: {grid_position: 'NKKBEM,CMMUOT'}
-  - name: image_1
-    properties: {}
-    type: Image
-    layout_properties: {grid_position: 'PDJCEH,RVGALL'}
+    data_bindings:
+    - {property: items, code: 'self.drop_down_answer.items = [''a'', ''b'', ''c'',
+        ''d'']', writeback: false}
+    - {property: selected_value, code: 'self.item[''answer'']', writeback: false}
   - name: label_2
     properties: {text: 'Question:'}
     type: Label
     layout_properties: {grid_position: 'DBDMCM,KJEBQN'}
-  - name: QuestionCon
+  - name: text_box_question
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'NSHTED,YTRDSP'}
+    event_bindings: {pressed_enter: text_box_question_pressed_enter}
+    data_bindings:
+    - {property: text, code: 'self.item[''question'']', writeback: false}
   - name: label_4
     properties: {text: 'Answers:'}
     type: Label
     layout_properties: {grid_position: 'GOLOZE,WZGOHP'}
-  - name: a
+  - name: text_box_optiona
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'ZDDPTS,TWYVQU'}
-  - name: b
+    data_bindings:
+    - {property: text, code: 'self.item[''optiona'']', writeback: false}
+  - name: text_box_optionb
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'QAEDNS,ZWEAKB'}
-  - name: c
+    data_bindings:
+    - {property: text, code: 'self.item[''optionb'']', writeback: false}
+  - name: text_box_optionc
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'HNDHVP,QAABST'}
-  - name: d
+    data_bindings:
+    - {property: text, code: 'self.item[''optionc'']', writeback: false}
+  - name: text_box_optiond
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'HNLDOJ,QMQBGP'}
-  - name: uploadimage
+    data_bindings:
+    - {property: text, code: 'self.item[''optiond'']', writeback: false}
+  - name: file_loader_1
     properties: {text: Upload Image}
     type: FileLoader
     layout_properties: {grid_position: 'CTYSHZ,EJUAVI'}
@@ -62,15 +66,24 @@ components:
     properties: {text: 'Time:'}
     type: Label
     layout_properties: {grid_position: 'ZUQTXQ,DLVJHD'}
-  - name: time
-    properties: {role: outlined}
+  - name: numeric_box_time
+    properties: {role: outlined, type: number}
     type: TextBox
     layout_properties: {grid_position: 'ZUQTXQ,LGFPMC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''time'']', writeback: false}
   - name: label_6
     properties: {text: 'Points:'}
     type: Label
     layout_properties: {grid_position: 'VGPDYP,TFPLAR'}
-  - name: points
-    properties: {role: outlined}
+  - name: numeric_box_questionweight
+    properties: {role: outlined, type: number}
     type: TextBox
     layout_properties: {grid_position: 'VGPDYP,PMOPTT'}
+    data_bindings:
+    - {property: text, code: 'self.item[''questionweight'']', writeback: false}
+  - name: button_save
+    properties: {text: Save, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'TDZWBB,IURBBQ'}
+    event_bindings: {click: button_save_click}
