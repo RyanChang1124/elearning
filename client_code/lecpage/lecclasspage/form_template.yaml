@@ -53,6 +53,7 @@ components:
     properties: {text: Materials}
     type: Button
     layout_properties: {}
+    event_bindings: {click: Materials_click}
   - name: log
     properties: {text: Log Out}
     type: Button

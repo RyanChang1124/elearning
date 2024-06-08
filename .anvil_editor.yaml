@@ -15,13 +15,16 @@ unique_ids:
     lecpage.lecclasspage.quizedit: '1717793242566152307666599.35303'
     stupage.classroompage.materials: '1717402936986976191873259.8933'
     stupage.classroompage.studentprofile: '171740167071762725822774.54242'
+    lecpage.lecclasspage.lecmaterial: '1717853541395438965948436.4117'
     stupage.classroompage: '1717330051158113687261307.89786'
     lecpage: '1717266278969926000500069.889'
     lecpage.lecclasspage.quizedit.ItemTemplate7: '1717843596610882661228969.034'
+    lecpage.lecclasspage.lecmaterial.editmaterial: '1717854380835658689105870.3706'
     stupage.classroompage.materials.ItemTemplate3: '1717403033605666512927033.9738'
     lecpage.classcreation: '1717690964592441132028474.2466'
     stupage.classroompage.QuizForm: '1717350032369735367662771.3856'
     stupage.classlist: '171726967398915377476473.906303'
+    lecpage.lecclasspage.lecmaterial.ItemTemplate3_copy: '1717856383567489260685226.96967'
   modules: {}
   server_modules:
     ServerModule1: '1716994639618264270756552.33212'

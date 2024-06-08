@@ -33,4 +33,9 @@ class lecclasspage(lecclasspageTemplate):
     """This method is called when the button is clicked"""
     anvil.users.logout()
     open_form('menu')
+
+  def Materials_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    global classccode
+    open_form('lecpage.lecclasspage.lecmaterial',classcode)
       

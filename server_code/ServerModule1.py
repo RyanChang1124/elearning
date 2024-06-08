@@ -19,7 +19,15 @@ import pandas as pd
 #   return 42
 #
 import datetime
-
+@anvil.server.callable
+def getawaredt():
+    now = pd.Timestamp.now()
+  
+    # Make it timezone-aware
+    aware_datetime = now.tz_localize('Asia/Kuala_Lumpur')  # Use your desired timezone
+    
+    return aware_datetime
+  
 @anvil.server.callable
 def get_current_time():
     return datetime.datetime.now().timestamp()
