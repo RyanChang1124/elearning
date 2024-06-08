@@ -17,7 +17,7 @@ class classroompage(classroompageTemplate):
       # Set Form properties and Data Bindings.
       global classnow
       classnow = classid
-      quizzes = app_tables.quizzes.search(tables.order_by("endtime",ascending=False),classcode=classnow)
+      quizzes = app_tables.quizzes.search(tables.order_by("endtime",ascending=False),classcode=classnow,available=True)
       self.repeating_panel_1.items = quizzes
       self.init_components(**properties)
   

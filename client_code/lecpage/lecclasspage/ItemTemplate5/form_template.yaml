@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: outlined_card_1
-  properties: {role: outlined-card, col_widths: '{"BSZSWQ":30,"WLATSW":20,"SGEWTT":10}'}
+  properties: {role: outlined-card, col_widths: '{"BSZSWQ":25,"WLATSW":25,"SGEWTT":10,"KSNUQJ":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'VPYHSW,JNVVNB'}
   components:
@@ -18,6 +18,11 @@ components:
     layout_properties: {grid_position: 'ORYSGU,WLATSW'}
     data_bindings:
     - {property: text, code: 'self.item[''endtime'']', writeback: false}
+  - name: outlined_button_2
+    properties: {text: Results, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'ORYSGU,KSNUQJ'}
+    event_bindings: {click: outlined_button_2_click}
   - name: outlined_button_1
     properties: {text: Edit, role: outlined-button}
     type: Button

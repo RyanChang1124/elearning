@@ -19,4 +19,8 @@ class ItemTemplate5(ItemTemplate5Template):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('lecpage.lecclasspage.quizedit',self.item['classcode'],self.item['quizcode'])
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lecpage.lecclasspage.lecmaterial.resultsboard_copy',self.item['quizcode'],self.item['classcode'])
     

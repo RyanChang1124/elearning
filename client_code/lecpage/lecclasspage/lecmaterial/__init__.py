@@ -27,4 +27,4 @@ class lecmaterial(lecmaterialTemplate):
   def outlined_button_1_click(self, **event_args):
     global classnow
     """This method is called when the button is clicked"""
-    open_form('lecpage.lecclasspage',classnow)
+    open_form('lecpage.lecclasspage.lecmaterial.resultsboard_copy',classnow)

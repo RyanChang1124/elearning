@@ -78,7 +78,8 @@ class quizedit(quizeditTemplate):
     uprow = app_tables.quizzes.get(classcode=classidnow,quizcode=quizidnow)
     uprow.update(available=self.check_box_1.checked,
                 endtime=self.date_picker_1.date,
-                quizname=self.quizname.text)
+                quizname=self.quizname.text,
+                lecturer=anvil.users.get_user()['username'])
     open_form('lecpage.lecclasspage',classidnow)
 
   def outlined_button_1_click(self, **event_args):

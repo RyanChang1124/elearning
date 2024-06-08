@@ -213,4 +213,12 @@ class QuizForm(QuizFormTemplate):
       """This method is called when the button is clicked"""
       classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
       open_form('stupage.classroompage',classtoreturn)
+
+    def outlined_button_1_click(self, **event_args):
+      global quizcoderem
+      """This method is called when the button is clicked"""
+      classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
+      targetquiz = app_tables.quizzes.get(quizcode=quizcoderem)
+      targetquiz['reports'] +=1
+      open_form('stupage.classroompage',classtoreturn)
       
