@@ -57,6 +57,7 @@ components:
     properties: {text: Log Out}
     type: Button
     layout_properties: {}
+    event_bindings: {click: log_click}
 - name: label_1
   properties: {text: QLEARN}
   type: Label

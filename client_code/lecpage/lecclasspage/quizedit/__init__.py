@@ -70,3 +70,17 @@ class quizedit(quizeditTemplate):
   def generate_question_num(self):
     max_question_num = max((qu['questionnum'] for qu in app_tables.quizcontent.search(quizcode=self.quiz['quizcode'])), default=0)
     return max_question_num + 1
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    global classidnow
+    global quizidnow
+    uprow = app_tables.quizzes.get(classcode=classidnow,quizcode=quizidnow)
+    uprow.update(available=self.check_box_1.checked,
+                endtime=self.date_picker_1.date,
+                quizname=self.quizname.text)
+    open_form('lecpage.lecclasspage',classidnow)
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lecpage.lecclasspage',self.quiz['classcode'])

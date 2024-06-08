@@ -27,4 +27,10 @@ class lecclasspage(lecclasspageTemplate):
   def outlined_button_1_click(self, **event_args):
     global classcode
     """This method is called when the button is clicked"""
-    open_form('lecpage.lecclasspage.quizedit', 0,classcode )
+    open_form('lecpage.lecclasspage.quizedit', classcode,0 )
+
+  def log_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.logout()
+    open_form('menu')
+      
