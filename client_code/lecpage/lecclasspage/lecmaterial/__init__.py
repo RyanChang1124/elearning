@@ -28,3 +28,5 @@ class lecmaterial(lecmaterialTemplate):
     global classnow
     """This method is called when the button is clicked"""
     open_form('lecpage.lecclasspage.lecmaterial.resultsboard_copy',classnow)
+
+
