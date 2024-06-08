@@ -31,99 +31,18 @@ components:
       type: DatePicker
       layout_properties: {grid_position: 'JDDZIH,YOSLGW'}
   - name: outlined_card_2
-    properties: {role: outlined-card, col_widths: '{"RHADCJ":10,"XIMYPT":10,"SRUIMB":50,"YIVAEH":15,"NQOQFV":15,"QBNZES":15,"BJUUEI":15,"JODQXD":15,"DSJBHM":45}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'SOSRKH,JBROHP'}
-    components:
-    - name: label_4
-      properties: {text: 'Question:'}
-      type: Label
-      layout_properties: {grid_position: 'AMXPRX,RHADCJ'}
-    - name: qnum
-      properties: {}
-      type: DropDown
-      layout_properties: {grid_position: 'AMXPRX,RKJXGN'}
-    - name: label_5
-      properties: {text: 'Answer:'}
-      type: Label
-      layout_properties: {grid_position: 'AMXPRX,XIMYPT'}
-    - name: drop_down_1
-      properties: {}
-      type: DropDown
-      layout_properties: {grid_position: 'AMXPRX,SRUIMB'}
-    - name: outlined_card_4
-      properties: {role: outlined-card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'DAHXUX,YANHXU'}
-      components:
-      - name: Questionprompt
-        properties: {role: outlined}
-        type: TextBox
-        layout_properties: {grid_position: 'DGXVOM,WCNYKY'}
-      - name: image_1
-        properties: {}
-        type: Image
-        layout_properties: {grid_position: 'CYRLRQ,IHLZLX'}
-    - name: a
-      properties: {role: outlined, placeholder: Answer A}
-      type: TextBox
-      layout_properties: {grid_position: 'AGAYBG,KXIOIF'}
-    - name: b
-      properties: {role: outlined, placeholder: Answer B}
-      type: TextBox
-      layout_properties: {grid_position: 'ZTXYYK,TKORGS'}
-    - name: c
-      properties: {role: outlined, placeholder: Answer C}
-      type: TextBox
-      layout_properties: {grid_position: 'BVOVIX,CIDDWI'}
-    - name: d
-      properties: {role: outlined, placeholder: Answer D}
-      type: TextBox
-      layout_properties: {grid_position: 'XNVAWX,XPHDCT'}
-    - name: label_6
-      properties: {text: 'Points:'}
-      type: Label
-      layout_properties: {grid_position: 'KLIVND,YIVAEH'}
-    - name: score
-      properties: {role: outlined, type: number, placeholder: '...', text: '30'}
-      type: TextBox
-      layout_properties: {grid_position: 'KLIVND,NQOQFV'}
-      data_bindings: []
-    - name: label_7
-      properties: {text: 'Time (Seconds):'}
-      type: Label
-      layout_properties: {grid_position: 'KLIVND,QBNZES'}
-    - name: time
-      properties: {role: outlined, placeholder: '...', text: '30', type: number}
-      type: TextBox
-      layout_properties: {grid_position: 'KLIVND,BJUUEI'}
-    - name: file_loader_1
-      properties: {text: Upload Image, file_types: '', icon: 'fa:upload'}
-      type: FileLoader
-      layout_properties: {grid_position: 'BQAEEL,JODQXD'}
-      data_bindings: []
-    - name: submit
-      properties: {text: Submit, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'BQAEEL,DSJBHM'}
-      event_bindings: {click: submit_click}
-  - name: outlined_card_3
     properties: {role: outlined-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'FXPCCE,UXRQVL'}
+    layout_properties: {grid_position: 'SVUIGB,AGRNTL'}
     components:
     - name: repeating_panel_1
-      properties: {item_template: lecpage.lecclasspage.quizedit.ItemTemplate6}
+      properties: {item_template: lecpage.lecclasspage.quizedit.ItemTemplate7}
       type: RepeatingPanel
-      layout_properties: {grid_position: 'RKWSNS,PFTGCQ'}
-    - name: check_box_1
-      properties: {text: 'Activate Quiz?'}
-      type: CheckBox
-      layout_properties: {grid_position: 'IIQVLI,OVHFTI'}
-    - name: outlined_button_2
-      properties: {text: Save, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'IIQVLI,YSAPXU'}
+      layout_properties: {grid_position: 'ONOULU,SIDFWL'}
+  - name: outlined_button_2
+    properties: {text: Save, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'CYJKRS,COSUTM'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

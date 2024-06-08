@@ -1,0 +1,76 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: questioncard
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'STQCMJ,CLTMPQ'}
+  components:
+  - name: label_1
+    properties: {text: 'Question Number:'}
+    type: Label
+    layout_properties: {grid_position: 'NKKBEM,TGAJJQ'}
+  - name: quesnum
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NKKBEM,WPWZVT'}
+  - name: label_3
+    properties: {text: Correct Answer}
+    type: Label
+    layout_properties: {grid_position: 'NKKBEM,TSWVOA'}
+  - name: correctanswer
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'NKKBEM,CMMUOT'}
+  - name: image_1
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'PDJCEH,RVGALL'}
+  - name: label_2
+    properties: {text: 'Question:'}
+    type: Label
+    layout_properties: {grid_position: 'DBDMCM,KJEBQN'}
+  - name: QuestionCon
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'NSHTED,YTRDSP'}
+  - name: label_4
+    properties: {text: 'Answers:'}
+    type: Label
+    layout_properties: {grid_position: 'GOLOZE,WZGOHP'}
+  - name: a
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'ZDDPTS,TWYVQU'}
+  - name: b
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'QAEDNS,ZWEAKB'}
+  - name: c
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'HNDHVP,QAABST'}
+  - name: d
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'HNLDOJ,QMQBGP'}
+  - name: uploadimage
+    properties: {text: Upload Image}
+    type: FileLoader
+    layout_properties: {grid_position: 'CTYSHZ,EJUAVI'}
+  - name: label_5
+    properties: {text: 'Time:'}
+    type: Label
+    layout_properties: {grid_position: 'ZUQTXQ,DLVJHD'}
+  - name: time
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'ZUQTXQ,LGFPMC'}
+  - name: label_6
+    properties: {text: 'Points:'}
+    type: Label
+    layout_properties: {grid_position: 'VGPDYP,TFPLAR'}
+  - name: points
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'VGPDYP,PMOPTT'}
