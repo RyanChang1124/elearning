@@ -103,9 +103,6 @@ db_schema:
     - name: lecturer
       admin_ui: {width: 200, order: 2}
       type: string
-    - name: starttime
-      admin_ui: {width: 200, order: 4}
-      type: datetime
     - name: endtime
       admin_ui: {width: 200, order: 5}
       type: datetime
