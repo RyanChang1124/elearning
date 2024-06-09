@@ -29,6 +29,8 @@ class menu(menuTemplate):
         open_form('stupage')
       elif anvil.users.get_user()['role'] == 'Lecturer':
         open_form('lecpage')
+      elif anvil.users.get_user()['role'] == 'Admin':
+        open_form('menu.admindash')
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""

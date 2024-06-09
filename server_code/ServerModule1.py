@@ -6,6 +6,11 @@ from anvil.tables import app_tables
 import anvil.users
 import anvil.server
 import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
+import pytz
+import io
+import anvil.media
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -18,7 +23,6 @@ import pandas as pd
 #   print("Hello, " + name + "!")
 #   return 42
 #
-import datetime
 @anvil.server.callable
 def getawaredt():
     now = pd.Timestamp.now()
@@ -31,7 +35,53 @@ def getawaredt():
 @anvil.server.callable
 def get_current_time():
     return datetime.datetime.now().timestamp()
-  
+
+@anvil.server.callable
+def getmetrics():
+  total = len(app_tables.users.search())
+  students = len(app_tables.users.search(role='Student'))
+  lecturers = len(app_tables.users.search(role='Lecturer'))
+  return total, students, lecturers
+
+@anvil.server.callable
+def plotactive():
+    # Get the current date and time
+    now = datetime.now(pytz.utc)
+    
+    # Calculate the date and time one month ago
+    one_month_ago = now - timedelta(days=30)
+    
+    # Query the Users table for users who have logged in within the last month
+    recent_users = app_tables.users.search(tables.order_by("last_login", ascending=False))
+    recent_users = [user for user in recent_users if user['last_login'] > one_month_ago]
+    
+    # Query the Users table for all users
+    all_users = app_tables.users.search()
+    all_users = [user for user in all_users]
+    
+    # Calculate the number of users who have and haven't logged in within the last month
+    logged_in = len(recent_users)
+    not_logged_in = len(all_users) - logged_in
+    
+    # Create a pie chart
+    fig, ax = plt.subplots()
+
+    def value_and_percentage(val):
+        total = sum([logged_in, not_logged_in])
+        absolute = int(round(val*total/100.0))
+        percentage = val
+        return "{:.1f}%\n({:d})".format(percentage, absolute)
+    ax.pie([logged_in, not_logged_in], labels=['Active', 'Inactive'], autopct=value_and_percentage)
+    
+    # Save the figure to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    buf_bytes = buf.getvalue()
+    
+    # Convert the BytesIO object to an Anvil Media object and return it
+    return anvil.BlobMedia("image/png", buf_bytes, name="pie_chart.png")
+
 @anvil.server.callable
 def metricdateincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
