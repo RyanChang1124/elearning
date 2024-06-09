@@ -13,6 +13,7 @@ unique_ids:
     stupage.classroompage.resultsboard.ItemTemplate1: '1717528126872147543812308.74957'
     stupage.classroompage.materials.materialview: '1717524900983699017191868.041'
     stupage: '1716995183750919380132733.1943'
+    menu.reports: '1717942229683917037039939.7236'
     lecpage.lecclasspage.quizedit: '1717793242566152307666599.35303'
     stupage.classroompage.materials: '1717402936986976191873259.8933'
     stupage.classroompage.studentprofile: '171740167071762725822774.54242'
@@ -28,6 +29,7 @@ unique_ids:
     stupage.classroompage.QuizForm: '1717350032369735367662771.3856'
     stupage.classlist: '171726967398915377476473.906303'
     lecpage.lecclasspage.lecmaterial.ItemTemplate3_copy: '1717856383567489260685226.96967'
+    menu.reports.ItemTemplate6: '1717942280865924467361058.3909'
   modules: {}
   server_modules:
     ServerModule1: '1716994639618264270756552.33212'
