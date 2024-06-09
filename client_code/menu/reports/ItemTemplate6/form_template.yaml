@@ -23,3 +23,5 @@ components:
   properties: {}
   type: Label
   layout_properties: {grid_position: 'PKOJPX,MMHMQO'}
+  data_bindings:
+  - {property: text, code: 'self.item[''reports'']', writeback: false}
