@@ -83,6 +83,68 @@ def plotactive():
     return anvil.BlobMedia("image/png", buf_bytes, name="pie_chart.png")
 
 @anvil.server.callable
+def plot_login_chart():
+    # Query the Logins table for all records
+    logins = app_tables.metrics.search(tables.order_by("date"))
+    
+    # Extract the dates and number of logins
+    dates = [record['date'] for record in logins]
+    num_logins = [record['NumberOfLogins'] for record in logins]
+    # Limit to the last 7 dates
+    dates = dates[:7]
+    num_logins = num_logins[:7]
+    # Create a line plot
+    fig, ax = plt.subplots(figsize = (10,5))
+    ax.plot(dates, num_logins)
+    
+    # Set the title and labels
+    ax.set_title('Number of Logins this week')
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Number of Logins')
+    
+    # Save the figure to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    
+    # Convert the BytesIO object to bytes
+    buf_bytes = buf.getvalue()
+    
+    # Convert the bytes to an Anvil Media object and return it
+    return anvil.BlobMedia("image/png", buf_bytes, name="login_chart.png")
+
+@anvil.server.callable
+def plot_quizcomplete_chart():
+    # Query the Logins table for all records
+    logins = app_tables.metrics.search(tables.order_by("date"))
+    
+    # Extract the dates and number of logins
+    dates = [record['date'] for record in logins]
+    num_quiz = [record['quizzescomplete'] for record in logins]
+    # Limit to the last 7 dates
+    dates = dates[:7]
+    num_quiz = num_quiz[:7]
+    # Create a line plot
+    fig, ax = plt.subplots(figsize = (10,5))
+    ax.plot(dates, num_quiz)
+    
+    # Set the title and labels
+    ax.set_title('Number of Completed Quizzes this week')
+    ax.set_xlabel('Date')
+    ax.set_ylabel('COmpleted Quizzes')
+    
+    # Save the figure to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    
+    # Convert the BytesIO object to bytes
+    buf_bytes = buf.getvalue()
+    
+    # Convert the bytes to an Anvil Media object and return it
+    return anvil.BlobMedia("image/png", buf_bytes, name="quiz_chart.png")
+
+@anvil.server.callable
 def metricdateincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
   today = pd.to_datetime('today')
