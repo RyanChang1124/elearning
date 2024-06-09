@@ -24,3 +24,7 @@ class admindash(admindashTemplate):
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('menu.activitydash')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('menu.reports')

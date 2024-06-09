@@ -41,5 +41,7 @@ class classcreation(classcreationTemplate):
                                  classcode=self.get_next_classcode(),
                                  baselevel=basevalue,
                                  levelincrement=value,
-                                 username=anvil.users.get_user()['username'])
+                                 username=anvil.users.get_user()['username'],
+                                 lectname=anvil.users.get_user()['name'],
+                                 email=anvil.users.get_user()['email'])
     open_form('lecpage')

@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
 import anvil.tables as tables
@@ -157,6 +158,13 @@ def metricdateincrement():
     app_tables.metrics.add_row(
     date=today,
     NumberOfLogins= 1)
+
+@anvil.server.callable
+def sendlectemail(email,sub,body):
+  anvil.email.send(from_name = anvil.users.get_user()['name'], 
+                    to = email,
+                    subject = sub,
+                    text = body)
 
 @anvil.server.callable
 def quizzesincrement():

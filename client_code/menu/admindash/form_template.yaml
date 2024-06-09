@@ -82,6 +82,7 @@ components:
     properties: {text: Reports}
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
+    event_bindings: {click: button_2_click}
 - name: label_1
   properties: {text: 'ADMINISTRATION '}
   type: Label

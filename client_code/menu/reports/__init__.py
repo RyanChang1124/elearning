@@ -11,11 +11,19 @@ from anvil.tables import app_tables
 
 class reports(reportsTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    reports = app_tables.quizzes.search(reports=anvil.tables.number_greater_than(0))
+    all_rows = app_tables.quizzes.search()
     
-    # Set the items of the RepeatingPanel
+    # Filter the rows where "reports" is more than 0
+    reports = [row for row in all_rows if row['reports'] > 0]
     self.repeating_panel_1.items = reports
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('menu.admindash')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('menu.activitydash')
