@@ -38,4 +38,9 @@ class lecclasspage(lecclasspageTemplate):
     """This method is called when the button is clicked"""
     global classccode
     open_form('lecpage.lecclasspage.lecmaterial',classcode)
+
+  def outlined_button_2_click(self, **event_args):
+    global classcode
+    """This method is called when the button is clicked"""
+    open_form('lecpage.lecclasspage.lectemail',classcode)
       

@@ -167,6 +167,13 @@ def sendlectemail(email,sub,body):
                     text = body)
 
 @anvil.server.callable
+def sendadminemail(sub,body):
+  anvil.email.send(from_name = anvil.users.get_user()['name'], 
+                    to = 'qlearnadmin@gmail.com',
+                    subject = sub,
+                    text = body)
+
+@anvil.server.callable
 def quizzesincrement():
   dates = [r['date'] for r in app_tables.metrics.search()]
   today = pd.to_datetime('today')

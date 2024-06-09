@@ -17,6 +17,11 @@ components:
       properties: {align: center, bold: true, font_size: 30}
       type: Label
       layout_properties: {grid_position: 'AFRPTG,SHTQQM'}
+  - name: outlined_button_2
+    properties: {text: Support Email, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'DZVNGL,DALIFA'}
+    event_bindings: {click: outlined_button_2_click}
   - name: outlined_card_2
     properties: {role: outlined-card}
     type: ColumnPanel
