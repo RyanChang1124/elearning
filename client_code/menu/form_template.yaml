@@ -33,7 +33,8 @@ components:
     data_bindings: []
     event_bindings: {click: button_1_click}
 - name: image_1
-  properties: {height: 255.6666259765625, source: ''}
+  properties: {height: '255', source: _/theme/IMG_5408.JPG, background: 'theme:Surface
+      Variant', border: '', horizontal_align: left}
   type: Image
   layout_properties: {slot: default}
 - name: label_1
