@@ -19,19 +19,20 @@ components:
       layout_properties: {grid_position: 'SXUJBK,NBXDAR'}
       components:
       - name: materialtitle
-        properties: {bold: true, font_size: 22}
+        properties: {bold: true, font_size: 30}
         type: Label
         layout_properties: {grid_position: 'JKLXLF,RWTFFA'}
         data_bindings:
         - {property: text, code: 'self.materiallist[''title'']', writeback: false}
     - name: materialcontent
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'MPELNI,TSFVTB'}
       data_bindings:
       - {property: text, code: 'self.materiallist[''desc'']', writeback: false}
     - name: outlined_button_1
-      properties: {text: Download Attachment, role: outlined-button, visible: false}
+      properties: {text: Download Attachment, role: outlined-button, visible: false,
+        font: p}
       type: Button
       layout_properties: {grid_position: 'JAZHZT,DMOGLA'}
       event_bindings: {click: outlined_button_1_click}
@@ -41,11 +42,11 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_1
-    properties: {text: Return}
+    properties: {text: Return, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
 - name: label_1
-  properties: {text: QLEARN}
+  properties: {text: QLEARN, foreground: 'theme:Secondary', font: p, italic: true}
   type: Label
   layout_properties: {slot: title}

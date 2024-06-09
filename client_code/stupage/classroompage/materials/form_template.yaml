@@ -32,15 +32,15 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Materials}
+    properties: {text: Materials, font: q, font_size: 16}
     type: Label
     layout_properties: {}
   - name: button_1
-    properties: {text: Main Menu}
+    properties: {text: Main Menu, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
 - name: label_1
-  properties: {text: QLEARN}
+  properties: {text: QLEARN, foreground: 'theme:Secondary', font: p, italic: true}
   type: Label
   layout_properties: {slot: title}

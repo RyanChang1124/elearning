@@ -9,32 +9,36 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_5
-    properties: {text: HOME}
+    properties: {text: HOME, font: satoshi}
     type: Button
     layout_properties: {}
+    data_bindings: []
+    event_bindings: {click: button_5_click}
   - name: button_4
-    properties: {text: QUIZ}
+    properties: {text: QUIZ, font: p}
     type: Button
     layout_properties: {}
   - name: button_3
-    properties: {text: MATERIAL}
+    properties: {text: MATERIAL, font: p}
     type: Button
     layout_properties: {}
   - name: button_2
-    properties: {text: ABOUT}
+    properties: {text: ABOUT, font: p}
     type: Button
     layout_properties: {}
   - name: button_1
-    properties: {text: LOGIN}
+    properties: {text: LOGIN, font: p}
     type: Button
     layout_properties: {}
     data_bindings: []
     event_bindings: {click: button_1_click}
-- name: label_1
-  properties: {text: Q LEARN}
-  type: Label
-  layout_properties: {slot: title}
 - name: image_1
-  properties: {height: 209}
+  properties: {height: 255.6666259765625, source: ''}
   type: Image
   layout_properties: {slot: default}
+- name: label_1
+  properties: {text: Q LEARN, font: Proxima Nova, underline: false, italic: true,
+    border: '', foreground: 'theme:Secondary', background: '', bold: false}
+  type: Label
+  layout_properties: {slot: title}
+  data_bindings: []

@@ -22,6 +22,7 @@ runtime_options:
   server_spec: {base: python310-standard}
   server_persist: true
 startup_form: null
+native_deps: {head_html: ''}
 db_schema:
   levelfactor:
     client: search

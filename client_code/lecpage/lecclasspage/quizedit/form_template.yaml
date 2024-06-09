@@ -14,7 +14,7 @@ components:
     layout_properties: {grid_position: 'TZLMJE,BIBKFI'}
     components:
     - name: label_3
-      properties: {text: 'Quiz Name:'}
+      properties: {text: 'Quiz Name:', font: p, bold: true}
       type: Label
       layout_properties: {grid_position: 'VSYMXH,OUGLQL'}
     - name: quizname
@@ -23,7 +23,7 @@ components:
       layout_properties: {grid_position: 'HPGIPX,CFCURD'}
       data_bindings: []
     - name: label_8
-      properties: {text: 'Deadline:'}
+      properties: {text: 'Deadline:', font: p, bold: true}
       type: Label
       layout_properties: {grid_position: 'DGYDTV,FHLDKG'}
     - name: date_picker_1
@@ -31,11 +31,11 @@ components:
       type: DatePicker
       layout_properties: {grid_position: 'JDDZIH,YOSLGW'}
     - name: check_box_1
-      properties: {text: 'Quiz Available?'}
+      properties: {text: 'Quiz Available?', font: p}
       type: CheckBox
       layout_properties: {grid_position: 'MELJRL,GIAJSV'}
   - name: button_add_question
-    properties: {text: New Question, role: outlined-button}
+    properties: {text: New Question, role: outlined-button, font: p}
     type: Button
     layout_properties: {grid_position: 'NFGRTO,QYIUZI'}
     event_bindings: {click: button_add_question_click}
@@ -59,15 +59,15 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Quiz Editor}
+    properties: {text: Quiz Editor, font: p, font_size: 16}
     type: Label
     layout_properties: {}
   - name: outlined_button_1
-    properties: {text: Return, role: outlined-button}
+    properties: {text: Return, role: outlined-button, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: outlined_button_1_click}
 - name: label_1
-  properties: {text: QLEARN}
+  properties: {text: QLEARN, font: p, font_size: 20, italic: true, foreground: 'theme:Secondary'}
   type: Label
   layout_properties: {slot: title}
