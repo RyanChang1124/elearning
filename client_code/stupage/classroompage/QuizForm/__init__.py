@@ -21,7 +21,7 @@ class QuizForm(QuizFormTemplate):
         quizcoderem = quizcode
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-      
+        self.metadata = app_tables.quizzes.get(quizcode=quizcode)
         # Retrieve the quiz data
         self.questions = app_tables.quizcontent.search(quizcode=quizcode)
         numofq = len(self.questions)
@@ -30,7 +30,7 @@ class QuizForm(QuizFormTemplate):
         self.correct_streak = 0
 
         # Retrieve the student's perk
-        self.student = app_tables.studentsclasses.get(student=studentid)
+        self.student = app_tables.studentsclasses.get(student=studentid,classcode=self.metadata['classcode'])
         self.user.text = self.student['student']
         self.perk = self.student['perk']
         self.level = self.student['level']
@@ -50,7 +50,7 @@ class QuizForm(QuizFormTemplate):
         self.option_d.text = question['optiond']
         if question['image'] is not None:
           self.outlined_card_3.visible = True
-          self.image.source = question['image']
+          self.image_1.source = question['image']
         else:
           self.outlined_card_3.visible = False 
 
@@ -58,7 +58,7 @@ class QuizForm(QuizFormTemplate):
         time = question['time']
         if self.perk == 'time':
             # The student has the 'time' perk, so increase the time by a certain amount
-            time += time * (1+(0.1 * self.level)) 
+            time = time * (1+(0.1 * self.level)) 
             time = round(time) # Modify this to suit your needs
         self.time_remaining = time
         self.timeleft.text = str(self.time_remaining)
@@ -186,7 +186,7 @@ class QuizForm(QuizFormTemplate):
       self.student['exp']+=self.score
       self.student['totalpoints']+=self.score
       self.student['completedquiz']+=1
-      self.studentpoints = self.student['level']
+      self.studentpoints.text = self.student['exp']
       anvil.server.call('quizzesincrement')
       self.outlined_card_1.visible = False
       self.outlined_card_2.visible = False
