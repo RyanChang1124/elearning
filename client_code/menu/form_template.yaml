@@ -38,22 +38,13 @@ components:
   type: Label
   layout_properties: {slot: title}
   data_bindings: []
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
+- name: xy_panel_1
+  properties: {height: 182.3359375}
+  type: XYPanel
   layout_properties: {slot: default}
   components:
-  - name: label_2
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'KLOMYC,ODVMAK'}
-  - name: xy_panel_1
-    properties: {height: 100}
-    type: XYPanel
-    layout_properties: {grid_position: 'FGBEYZ,XIRSQO'}
-    components:
-    - name: image_1
-      properties: {height: '255', source: _/theme/image (1).png, background: 'theme:Surface
-          Variant', border: '', horizontal_align: left, display_mode: fill_width}
-      type: Image
-      layout_properties: {x: 0, y: 0, width: 970}
+  - name: image_1
+    properties: {height: 527.5859375, source: _/theme/image (1).png, background: 'theme:Surface
+        Variant', border: '', horizontal_align: left, display_mode: fill_width}
+    type: Image
+    layout_properties: {x: 0, y: 0, width: 1098.3317187500002}
