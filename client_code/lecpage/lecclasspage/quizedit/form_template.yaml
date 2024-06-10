@@ -49,7 +49,7 @@ components:
       type: RepeatingPanel
       layout_properties: {grid_position: 'ONOULU,SIDFWL'}
   - name: outlined_button_2
-    properties: {text: Save Quiz, role: outlined-button}
+    properties: {text: Save Quiz, role: outlined-button, font: p}
     type: Button
     layout_properties: {grid_position: 'CYJKRS,COSUTM'}
     event_bindings: {click: outlined_button_2_click}

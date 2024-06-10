@@ -43,8 +43,15 @@ components:
   type: XYPanel
   layout_properties: {slot: default}
   components:
+  - name: label_2
+    properties: {text: 'Gamified e-learning.
+
+        FUTURE', foreground: 'theme:On Primary', font_size: 40, font: p, bold: true}
+    type: Label
+    layout_properties: {x: 362.5937601737678, y: 52.0625, width: 433.97918701171875}
   - name: image_1
-    properties: {height: 527.5859375, source: _/theme/image (1).png, background: 'theme:Surface
-        Variant', border: '', horizontal_align: left, display_mode: fill_width}
+    properties: {height: 480, source: _/theme/image (1).png, background: 'theme:Surface
+        Variant', border: '', horizontal_align: left, display_mode: original_size,
+      visible: true}
     type: Image
-    layout_properties: {x: 0, y: 0, width: 1098.3317187500002}
+    layout_properties: {x: 0, y: 0, width: 1300}
