@@ -12,10 +12,6 @@ components:
     properties: {text: Lecturer, font: p, font_size: 16}
     type: Label
     layout_properties: {}
-- name: label_1
-  properties: {text: QLEARN, foreground: 'theme:Secondary', font: p, italic: true}
-  type: Label
-  layout_properties: {slot: title}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -32,7 +28,7 @@ components:
     layout_properties: {grid_position: 'LNYHIX,RFUYXT'}
     components:
     - name: image_1
-      properties: {source: _/theme/ai.jpg, height: '200', display_mode: fill_width}
+      properties: {source: _/theme/IMG_5413.JPG, height: 396, display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'QJHIZV,BSAPHT'}
   - name: outlined_button_1
@@ -49,3 +45,7 @@ components:
       properties: {item_template: lecpage.ItemTemplate4}
       type: RepeatingPanel
       layout_properties: {grid_position: 'QSPDBL,UCCCSW'}
+- name: image_2
+  properties: {height: 49.666656494140625, source: _/theme/Cream and Beige Aesthetic Elegant Online Portfolio Shop Desktop Prototype.png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {slot: title}

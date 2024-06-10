@@ -17,8 +17,7 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'NKKBEM,CMMUOT'}
     data_bindings:
-    - {property: items, code: 'self.drop_down_answer.items = [''a'', ''b'', ''c'',
-        ''d'']', writeback: false}
+    - {property: items, code: 'self.drop_down_answer.items = [''a'', ''b'', ''c'', ''d'']', writeback: false}
     - {property: selected_value, code: 'self.item[''answer'']', writeback: false}
   - name: label_2
     properties: {text: 'Question:', font: p, bold: true}

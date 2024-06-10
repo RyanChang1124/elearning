@@ -67,8 +67,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Create a Classroom, foreground: 'theme:On Primary Container',
-      font: p, font_size: 16}
+    properties: {text: Create a Classroom, foreground: 'theme:On Primary Container', font: p, font_size: 16}
     type: Label
     layout_properties: {}
   - name: outlined_button_1
@@ -76,7 +75,7 @@ components:
     type: Button
     layout_properties: {}
     event_bindings: {click: outlined_button_1_click}
-- name: label_1
-  properties: {text: QLEARN, foreground: 'theme:Secondary', font: p, italic: true}
-  type: Label
+- name: image_1
+  properties: {source: _/theme/Cream and Beige Aesthetic Elegant Online Portfolio Shop Desktop Prototype.png, height: 48}
+  type: Image
   layout_properties: {slot: title}

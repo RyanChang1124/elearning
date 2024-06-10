@@ -48,6 +48,10 @@ components:
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   components:
+  - name: image_3
+    properties: {source: _/theme/Cream and Beige Aesthetic Elegant Online Portfolio Shop Desktop Prototype.png, height: 35.666656494140625}
+    type: Image
+    layout_properties: {grid_position: 'VXGXYW,TIHKSQ'}
   - name: button_1
     properties: {text: Dashboard, font: p}
     type: Button

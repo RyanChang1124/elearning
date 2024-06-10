@@ -56,14 +56,13 @@ components:
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5
-          properties: {text: 'Extra Time:
-
+          properties:
+            text: |
+              Extra Time:
               Gain extra time to answer each question.
 
-
               Upgrades increase the percentage of extra time provided.
-
-              ', font: p}
+            font: p
           type: Label
           layout_properties: {row: KXUYQC, width_xs: 8, col_xs: 4}
     - name: link_2
@@ -82,15 +81,13 @@ components:
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5_copy
-          properties: {text: 'Points Streak:
-
-              When answering more than one question correctly in a row, you gain some
-              extra points.
-
+          properties:
+            text: |
+              Points Streak:
+              When answering more than one question correctly in a row, you gain some extra points.
 
               Upgrades improve the extra points by percentage.
-
-              ', font: p}
+            font: p
           type: Label
           layout_properties: {row: KXUYQC, width_xs: 8, col_xs: 4}
     - name: link_3
@@ -109,15 +106,13 @@ components:
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5_copy_copy
-          properties: {text: 'Second Chance:
-
-              When you get a question wrong, you have a slight chance to gain an extra
-              attempt at the question.
-
+          properties:
+            text: |
+              Second Chance:
+              When you get a question wrong, you have a slight chance to gain an extra attempt at the question.
 
               Upgrades improve the odds of this happening.
-
-              ', font: p}
+            font: p
           type: Label
           layout_properties: {row: KXUYQC, width_xs: 8, col_xs: 4}
 - type: FlowPanel

@@ -22,8 +22,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QDXIOO,FNQYPQ'}
     - name: label_5
-      properties: {align: center, text: 'What will be your username?', font_size: 22,
-        font: p, bold: false, underline: false}
+      properties: {align: center, text: 'What will be your username?', font_size: 22, font: p, bold: false, underline: false}
       type: Label
       layout_properties: {grid_position: 'OCVTZE,WXQAIS'}
     - name: outlined_1
@@ -41,8 +40,7 @@ components:
     layout_properties: {grid_position: 'IKZJQU,RLFBXQ'}
     components:
     - name: label_7
-      properties: {align: center, text: 'What''s your real name? (this will only be
-          visible to members of your class)', font: p, font_size: 22}
+      properties: {align: center, text: 'What''s your real name? (this will only be visible to members of your class)', font: p, font_size: 22}
       type: Label
       layout_properties: {grid_position: 'BLDGVK,BHUEFF'}
     - name: outlined_2
@@ -87,8 +85,7 @@ components:
     layout_properties: {grid_position: 'RWXGBS,MJRVPW'}
     components:
     - name: label_10
-      properties: {font_size: 22, align: center, text: 'You''re all set, welcome home!',
-        font: p}
+      properties: {font_size: 22, align: center, text: 'You''re all set, welcome home!', font: p}
       type: Label
       layout_properties: {grid_position: 'UIVCHF,VYHAOQ'}
     - name: label_11

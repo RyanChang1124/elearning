@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Secondary Container'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -14,31 +14,31 @@ components:
     layout_properties: {grid_position: 'OPGTGI,TVAPZI'}
     components:
     - name: label_3
-      properties: {text: 'To:'}
+      properties: {text: 'To:', font: p, bold: true}
       type: Label
       layout_properties: {grid_position: 'DIQTTQ,LVMJTO NGJZVS,YRSUDB'}
     - name: label_5
-      properties: {text: 'Subject:'}
+      properties: {text: 'Subject:', font: p, bold: true}
       type: Label
       layout_properties: {grid_position: 'DIQTTQ,LVMJTO CYMFUM,ITGJXJ'}
     - name: label_4
-      properties: {text: QLEARN Admins}
+      properties: {text: QLEARN Admins, font: p}
       type: Label
       layout_properties: {grid_position: 'DIQTTQ,TDQSLY FYDZAG,APFAJF'}
     - name: subject
-      properties: {role: outlined, placeholder: email subject}
+      properties: {role: outlined, placeholder: email subject, font: p}
       type: TextBox
       layout_properties: {grid_position: 'DIQTTQ,TDQSLY OMOVBL,YDTWME'}
     - name: label_6
-      properties: {text: 'Body:'}
+      properties: {text: 'Body:', font: p, bold: true}
       type: Label
       layout_properties: {grid_position: 'JAMFWZ,XQGCBK'}
     - name: body
-      properties: {role: outlined, spacing_below: small, placeholder: email body}
+      properties: {role: outlined, spacing_below: small, placeholder: email body, text: '', font: p}
       type: TextBox
       layout_properties: {grid_position: 'SKYKCE,SJJXYD', full_width_row: false}
     - name: outlined_button_2
-      properties: {text: Send Email, role: outlined-button}
+      properties: {text: Send Email, role: outlined-button, font: p}
       type: Button
       layout_properties: {grid_position: 'WZXTRN,BFDALT'}
       event_bindings: {click: outlined_button_2_click}
@@ -48,15 +48,15 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Email Admin}
+    properties: {text: Email Admin, font: p, font_size: 16}
     type: Label
     layout_properties: {}
   - name: outlined_button_1
-    properties: {text: Return, role: outlined-button}
+    properties: {text: Return, role: outlined-button, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: outlined_button_1_click}
-- name: label_1
-  properties: {text: QLEARN}
-  type: Label
+- name: image_1
+  properties: {source: _/theme/Cream and Beige Aesthetic Elegant Online Portfolio Shop Desktop Prototype.png, height: 48.666656494140625}
+  type: Image
   layout_properties: {slot: title}
