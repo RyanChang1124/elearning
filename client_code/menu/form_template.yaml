@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_5
-    properties: {text: HOME, font: satoshi}
+    properties: {text: HOME, font: satoshi, bold: true}
     type: Button
     layout_properties: {}
     data_bindings: []
@@ -51,6 +51,7 @@ components:
     layout_properties: {x: 362.5937601737678, y: 52.0625, width: 433.97918701171875}
   - name: image_1
     properties: {height: 537.046875, source: _/theme/image (1).png, background: 'theme:Surface
-        Variant', border: '', horizontal_align: left, display_mode: fill_width, visible: true}
+        Variant', border: '', horizontal_align: left, display_mode: shrink_to_fit,
+      visible: true}
     type: Image
     layout_properties: {x: 0, y: 0, width: 1300}
