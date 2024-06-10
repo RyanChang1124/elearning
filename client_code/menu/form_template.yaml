@@ -34,7 +34,7 @@ components:
     event_bindings: {click: button_1_click}
 - name: image_1
   properties: {height: '255', source: _/theme/image (1).png, background: 'theme:Surface
-      Variant', border: '', horizontal_align: left}
+      Variant', border: '', horizontal_align: left, display_mode: fill_width}
   type: Image
   layout_properties: {slot: default}
 - name: label_1
