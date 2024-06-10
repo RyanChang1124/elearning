@@ -18,7 +18,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'CTNXEU,IEKHOZ'}
     - name: namebar
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'CTNXEU,RNNYOB'}
     - name: Username
@@ -26,7 +26,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'HNBGGL,PDSEHU'}
     - name: userbar
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'HNBGGL,BVZJRV'}
     - name: QuizzesComplete
@@ -34,7 +34,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'GOXEHG,DQXMQM'}
     - name: quizcompletebar
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'GOXEHG,ZKJCBO'}
     - name: TotalPoints
@@ -42,7 +42,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'LHWJBL,KKTTWZ'}
     - name: totalpointbar
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'LHWJBL,SVNYAG'}
     - name: outlined_button_1
@@ -65,11 +65,11 @@ components:
         type: Image
         layout_properties: {width: 79}
       - name: label_3
-        properties: {font_size: 25}
+        properties: {font_size: 25, font: p}
         type: Label
         layout_properties: {}
     - name: label_10
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'UDEILH,YZBKAW YDPXCB,TIYLWI'}
     - name: outlined_card_4
@@ -82,7 +82,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'IEYBFO,RZMSFK'}
       - name: label_8
-        properties: {}
+        properties: {font: p}
         type: Label
         layout_properties: {grid_position: 'IEYBFO,ASBLTV'}
       - name: label_5
@@ -90,7 +90,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'NYNNBV,TPORMK'}
       - name: label_9
-        properties: {}
+        properties: {font: p}
         type: Label
         layout_properties: {grid_position: 'NYNNBV,KRVYCA'}
       - name: label_6
@@ -98,7 +98,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'WBZRPB,HKDGVC'}
       - name: label_7
-        properties: {}
+        properties: {font: p}
         type: Label
         layout_properties: {grid_position: 'WBZRPB,ROJHZS'}
       - name: outlined_button_2
