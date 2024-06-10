@@ -40,7 +40,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: rich_text_1
-    properties: {content: ACTIVITY}
+    properties: {content: Activity, font: p}
     type: RichText
     layout_properties: {}
 - name: column_panel_1
@@ -49,20 +49,20 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: button_1
-    properties: {text: Dashboard}
+    properties: {text: Dashboard, font: p}
     type: Button
     layout_properties: {grid_position: 'KCXNHG,VDNOUH'}
     event_bindings: {click: button_1_click}
   - name: button_3
-    properties: {text: Activity}
+    properties: {text: Activity, font: p}
     type: Button
     layout_properties: {grid_position: 'LFTOAG,HWXHUW'}
   - name: button_2
-    properties: {text: Reports}
+    properties: {text: Reports, font: p}
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
     event_bindings: {click: button_2_click}
 - name: label_1
-  properties: {text: ADMINITRATION}
+  properties: {text: ADMINITRATION, font: p, bold: true}
   type: Label
   layout_properties: {slot: title}

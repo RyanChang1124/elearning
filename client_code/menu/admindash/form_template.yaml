@@ -14,11 +14,11 @@ components:
     layout_properties: {grid_position: 'LMZNZH,CFAGID'}
     components:
     - name: label_2
-      properties: {text: 'Concurrent Users:'}
+      properties: {text: 'Concurrent Users:', font: p}
       type: Label
       layout_properties: {grid_position: 'RAXJBQ,SWTSET'}
     - name: usercount
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'OKGPUD,EPLCZJ'}
   - name: outlined_card_2
@@ -27,11 +27,11 @@ components:
     layout_properties: {grid_position: 'JXRUFT,ULWMTJ'}
     components:
     - name: label_3
-      properties: {text: 'Students:'}
+      properties: {text: 'Students:', font: p}
       type: Label
       layout_properties: {grid_position: 'GAYUKO,EAZHHM'}
     - name: stucount
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'SLJTON,PLQDMY'}
   - name: outlined_card_3
@@ -40,11 +40,11 @@ components:
     layout_properties: {grid_position: 'JXRUFT,RDKLXE'}
     components:
     - name: label_4
-      properties: {text: 'Lecturers:'}
+      properties: {text: 'Lecturers:', font: p}
       type: Label
       layout_properties: {grid_position: 'FNIPNQ,EEKWOG'}
     - name: leccount
-      properties: {}
+      properties: {font: p}
       type: Label
       layout_properties: {grid_position: 'LYMBSB,YQFTQQ'}
   - name: outlined_card_4
@@ -53,7 +53,7 @@ components:
     layout_properties: {grid_position: 'HTDRXO,QLPIRT'}
     components:
     - name: label_5
-      properties: {text: 'Active Users:'}
+      properties: {text: 'Active Users:', font: p}
       type: Label
       layout_properties: {grid_position: 'XHPTQR,WRSLHA'}
     - name: image_1
@@ -70,20 +70,20 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: button_1
-    properties: {text: Dashboard}
+    properties: {text: Dashboard, font: p}
     type: Button
     layout_properties: {grid_position: 'KCXNHG,VDNOUH'}
   - name: button_3
-    properties: {text: Activity}
+    properties: {text: Activity, font: p}
     type: Button
     layout_properties: {grid_position: 'LFTOAG,HWXHUW'}
     event_bindings: {click: button_3_click}
   - name: button_2
-    properties: {text: Reports}
+    properties: {text: Reports, font: p}
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
     event_bindings: {click: button_2_click}
 - name: label_1
-  properties: {text: 'ADMINISTRATION '}
+  properties: {text: 'ADMINISTRATION ', font: p, bold: true}
   type: Label
   layout_properties: {slot: title}
