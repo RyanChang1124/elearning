@@ -4,7 +4,7 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {remember_me_days: 0.02083, use_email: true, use_google: false, confirm_email: false, require_mfa: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, mfa_timeout_days: 30, require_secure_passwords: true}
+  client_config: {remember_me_days: 0.02083, use_email: true, use_google: true, confirm_email: false, require_mfa: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, mfa_timeout_days: 30, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
