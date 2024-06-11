@@ -92,8 +92,8 @@ def plot_login_chart():
     dates = [record['date'] for record in logins]
     num_logins = [record['NumberOfLogins'] for record in logins]
     # Limit to the last 7 dates
-    dates = dates[:7]
-    num_logins = num_logins[:7]
+    dates = dates[7:]
+    num_logins = num_logins[7:]
     # Create a line plot
     fig, ax = plt.subplots(figsize = (10,5))
     ax.plot(dates, num_logins)
@@ -123,8 +123,8 @@ def plot_quizcomplete_chart():
     dates = [record['date'] for record in logins]
     num_quiz = [record['quizzescomplete'] for record in logins]
     # Limit to the last 7 dates
-    dates = dates[:7]
-    num_quiz = num_quiz[:7]
+    dates = dates[7:]
+    num_quiz = num_quiz[7:]
     # Create a line plot
     fig, ax = plt.subplots(figsize = (10,5))
     ax.plot(dates, num_quiz)
