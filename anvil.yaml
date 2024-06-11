@@ -4,11 +4,11 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {remember_me_days: 0.02083, use_email: true, use_google: true, confirm_email: false, require_mfa: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, mfa_timeout_days: 30, require_secure_passwords: true}
+  client_config: {remember_me_days: 0.02083, use_email: true, use_google: false, confirm_email: false, require_mfa: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, mfa_timeout_days: 30, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
-  server_config: {}
+  server_config: {enc_delegation_refresh_token: AB0V15HCa4u1vPc4drbNW1RDi416m48PoXndjC1t/WNpENAJW3VQnAVMTlF0LpRLw6pkWvE/XM1se/oTub5ZSdCc7H3ob3/+emUgmjTQBV/Ycd3aUX84ISveEiR1HTUTKvo62nolp6StnX9JO7wq30JGxA8/NXPgQENhybEFPCfN13SvOG/NV5Co30mDSzagFCGWpbpFWwUusN4ZNieaRDdNOp6sFrZ3XKwnAHikpk1lgYhsFrAZT9LlwA/9/OOCjOu2IWD/RELfjw7ZfuItzDfvxtojCTcSdy0ILqIWQCfUvABKVZ/5JeJa+W0Pyg==}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {test_mode: true}
@@ -25,52 +25,58 @@ runtime_options:
 startup_form: null
 native_deps: {head_html: ''}
 db_schema:
-  levelfactor:
-    client: search
+  studentsclasses:
+    client: full
     server: full
     columns:
-    - name: lvlfactor
-      admin_ui: {width: 200, order: 0}
+    - name: student
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: classcode
+      admin_ui: {width: 200, order: 1}
       type: number
-    title: levelfactor
-  quizcontent:
+    - name: studentsetup
+      admin_ui: {width: 200, order: 2}
+      type: bool
+    - name: perk
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: level
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: exp
+      admin_ui: {width: 200, order: 5}
+      type: number
+    - name: completedquiz
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: totalpoints
+      admin_ui: {width: 200, order: 7}
+      type: number
+    title: StudentsClasses
+  quizresult:
     client: full
     server: full
     columns:
     - name: quizcode
       admin_ui: {width: 200, order: 0}
       type: number
-    - name: questionnum
+    - name: result
       admin_ui: {width: 200, order: 1}
       type: number
-    - name: optiona
+    - name: points
       admin_ui: {width: 200, order: 2}
-      type: string
-    - name: optionb
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: optionc
+      type: number
+    - name: student
       admin_ui: {width: 200, order: 4}
       type: string
-    - name: optiond
+    - name: perk
       admin_ui: {width: 200, order: 5}
       type: string
-    - name: image
+    - name: correctpercentage
       admin_ui: {width: 200, order: 6}
-      type: media
-    - name: answer
-      admin_ui: {width: 200, order: 7}
-      type: string
-    - name: time
-      admin_ui: {width: 200, order: 8}
       type: number
-    - name: questionweight
-      admin_ui: {width: 200, order: 9}
-      type: number
-    - name: question
-      admin_ui: {order: 1.5, width: 200}
-      type: string
-    title: QuizContent
+    title: QuizResult
   classrooms:
     client: full
     server: full
@@ -146,29 +152,66 @@ db_schema:
       admin_ui: {width: 200, order: 5}
       type: media
     title: Materials
-  quizresult:
+  quizcontent:
     client: full
     server: full
     columns:
     - name: quizcode
       admin_ui: {width: 200, order: 0}
       type: number
-    - name: result
+    - name: questionnum
       admin_ui: {width: 200, order: 1}
       type: number
-    - name: points
+    - name: optiona
       admin_ui: {width: 200, order: 2}
-      type: number
-    - name: student
+      type: string
+    - name: optionb
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: optionc
       admin_ui: {width: 200, order: 4}
       type: string
-    - name: perk
+    - name: optiond
       admin_ui: {width: 200, order: 5}
       type: string
-    - name: correctpercentage
+    - name: image
       admin_ui: {width: 200, order: 6}
+      type: media
+    - name: answer
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: time
+      admin_ui: {width: 200, order: 8}
       type: number
-    title: QuizResult
+    - name: questionweight
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: question
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: QuizContent
+  levelfactor:
+    client: search
+    server: full
+    columns:
+    - name: lvlfactor
+      admin_ui: {width: 200, order: 0}
+      type: number
+    title: levelfactor
+  metrics:
+    client: full
+    server: full
+    columns:
+    - name: NumberOfLogins
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: date
+      admin_ui: {width: 200, order: 0}
+      type: date
+    - name: quizzescomplete
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: Metrics
   users:
     client: none
     server: full
@@ -188,9 +231,6 @@ db_schema:
     - name: n_password_failures
       admin_ui: {order: 4, width: 200}
       type: number
-    - name: confirmed_email
-      admin_ui: {order: 5, width: 200}
-      type: bool
     - name: remembered_logins
       admin_ui: {order: 6, width: 200}
       type: simpleObject
@@ -216,47 +256,4 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: Users
-  studentsclasses:
-    client: full
-    server: full
-    columns:
-    - name: student
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: classcode
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: studentsetup
-      admin_ui: {width: 200, order: 2}
-      type: bool
-    - name: perk
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: level
-      admin_ui: {order: 4, width: 200}
-      type: number
-    - name: exp
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: completedquiz
-      admin_ui: {width: 200, order: 6}
-      type: number
-    - name: totalpoints
-      admin_ui: {width: 200, order: 7}
-      type: number
-    title: StudentsClasses
-  metrics:
-    client: full
-    server: full
-    columns:
-    - name: NumberOfLogins
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: date
-      admin_ui: {width: 200, order: 0}
-      type: date
-    - name: quizzescomplete
-      admin_ui: {width: 200, order: 2}
-      type: number
-    title: Metrics
 renamed: true
