@@ -29,9 +29,6 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: classcode
-      admin_ui: {width: 200, order: 0}
-      type: string
     - name: student
       admin_ui: {width: 200, order: 1}
       type: string
@@ -41,6 +38,12 @@ db_schema:
     - name: response
       admin_ui: {width: 200, order: 3}
       type: string
+    - name: feedbackcode
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: classcode
+      admin_ui: {width: 200, order: -0.5}
+      type: number
     title: feedback
   studentsclasses:
     client: full
