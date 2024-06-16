@@ -3,16 +3,16 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{"ENHZOI":70,"FFCFBA":10}'}
 components:
-- name: subject
-  properties: {align: left}
-  type: Label
-  layout_properties: {grid_position: 'HCCLGM,TWUXAL'}
+- name: Subject
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'QLKJCO,SZGFYX'}
 - name: response
   properties: {}
   type: Label
   layout_properties: {grid_position: 'IZIDJB,CVMMRX'}
 - name: button_1
-  properties: {text: Send}
+  properties: {text: Save}
   type: Button
   layout_properties: {grid_position: 'UNPVYL,ENHZOI'}
 - name: button_2
