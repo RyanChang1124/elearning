@@ -25,6 +25,23 @@ runtime_options:
 startup_form: null
 native_deps: {head_html: ''}
 db_schema:
+  feedback:
+    client: none
+    server: full
+    columns:
+    - name: classcode
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: student
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: content
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: response
+      admin_ui: {width: 200, order: 3}
+      type: string
+    title: feedback
   studentsclasses:
     client: full
     server: full
