@@ -11,16 +11,16 @@ components:
   - name: outlined_card_1
     properties: {role: outlined-card, background: 'theme:Primary Container'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'HJOHFB,DTXKTW'}
+    layout_properties: {grid_position: ''}
     components:
     - name: label_1
       properties: {text: FEEDBACK, align: center, font_size: 25, bold: true}
       type: Label
       layout_properties: {grid_position: 'MYJYRV,ZGDLIU'}
   - name: repeating_panel_1
-    properties: {item_template: stupage.classroompage.stufeedback.ItemTemplate8}
+    properties: {item_template: lecpage.lecclasspage.lecfeedback.ItemTemplate9}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'HQIVSN,PRZTUL'}
+    layout_properties: {grid_position: 'GYYFNX,XGCGZC'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
