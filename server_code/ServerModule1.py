@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 import pytz
 import io
 import anvil.media
+import psycopg2
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -253,4 +254,11 @@ def getlectclasses(lecturer_username):
           classes.append({'classroom': classroom_name, 'classcode': class_code})
     
     return classes
-    
+
+@anvil.server.http_endpoint('/receive_email')
+def receive_email(**params):
+    # Assuming 'params' contains the email data
+    sender = params.get('from')
+    subject = params.get('subject')
+    body = params.get('body')
+    app_tables.emails.add_row(body=body,sender=sender,viewed=False,subject=subject)

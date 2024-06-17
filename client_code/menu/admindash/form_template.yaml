@@ -87,6 +87,11 @@ components:
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
     event_bindings: {click: button_2_click}
+  - name: button_2_copy
+    properties: {text: Feedback, font: p}
+    type: Button
+    layout_properties: {grid_position: 'CFISUJ,KQNOJI'}
+    event_bindings: {click: button_4_click}
 - name: label_1
   properties: {text: 'ADMINISTRATION ', font: p, bold: true}
   type: Label

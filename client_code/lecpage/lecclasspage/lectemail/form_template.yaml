@@ -26,7 +26,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'DIQTTQ,TDQSLY FYDZAG,APFAJF'}
     - name: subject
-      properties: {role: outlined, placeholder: email subject, font: p}
+      properties: {role: outlined, placeholder: '...', font: p}
       type: TextBox
       layout_properties: {grid_position: 'DIQTTQ,TDQSLY OMOVBL,YDTWME'}
     - name: label_6
@@ -34,7 +34,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'JAMFWZ,XQGCBK'}
     - name: body
-      properties: {role: outlined, spacing_below: small, placeholder: email body, text: '', font: p}
+      properties: {role: outlined, spacing_below: small, placeholder: '...', text: '', font: p}
       type: TextBox
       layout_properties: {grid_position: 'SKYKCE,SJJXYD', full_width_row: false}
     - name: outlined_button_2

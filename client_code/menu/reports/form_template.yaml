@@ -44,6 +44,12 @@ components:
     properties: {text: Reports, font: p}
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
+    event_bindings: {click: button_2_click}
+  - name: button_2_copy
+    properties: {text: Feedback, font: p, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'YMUTJH,BZHRFZ'}
+    event_bindings: {click: button_2_copy_click}
 - name: label_1
   properties: {text: ADMINISTRATION, font: p, bold: true}
   type: Label

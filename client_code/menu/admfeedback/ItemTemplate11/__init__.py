@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate9Template
+from ._anvil_designer import ItemTemplate11Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,14 +9,13 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate9(ItemTemplate9Template):
+class ItemTemplate11(ItemTemplate11Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.item['response'] = self.Subject.text
-    alert("Response Saved!")
+  def check_box_1_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.item['viewed'] = self.check_box_1.checked

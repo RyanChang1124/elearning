@@ -207,6 +207,23 @@ db_schema:
       admin_ui: {order: 1.5, width: 200}
       type: string
     title: QuizContent
+  emails:
+    client: full
+    server: full
+    columns:
+    - name: subject
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: sender
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: body
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: viewed
+      admin_ui: {width: 200, order: 3}
+      type: bool
+    title: emails
   levelfactor:
     client: search
     server: full

@@ -13,8 +13,7 @@ class lecfeedback(lecfeedbackTemplate):
   def __init__(self, classid, **properties):
     self.classid = classid
     # Set Form properties and Data Bindings.
-    self.user = anvil.users.get_user()["username"]
-    userfeedback = app_tables.feedback.search(classcode=self.classid, student=self.user)
+    userfeedback = app_tables.feedback.search(classcode=self.classid)
     self.repeating_panel_1.items = userfeedback
     self.init_components(**properties)
 

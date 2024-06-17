@@ -23,11 +23,8 @@ class lectemail(lectemailTemplate):
       if c is False:
         exit()
       if c is True:
-        anvil.server.call(
-          "sendadminemail", self.subject.text, self.body.text
-        )
-        alert("Email Sent!")
-        open_form("lecpage.lecclasspage", self.classid)
+        app_tables.emails.add_row(body=self.body,subject=self.subject,sender=(anvil.users.get_user()["username"]),viewed=False)
+        alert("Feedback Sent!")
     else:
       alert("One or more fields are empty!")
 

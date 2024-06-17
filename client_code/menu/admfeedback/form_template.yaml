@@ -1,0 +1,56 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: title}
+- name: column_panel_1_copy
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: image_2
+    properties: {source: _/theme/Cream and Beige Aesthetic Elegant Online Portfolio Shop Desktop Prototype.png, height: 32}
+    type: Image
+    layout_properties: {grid_position: 'JCJVVZ,NLGFJN'}
+  - name: button_1
+    properties: {text: Dashboard, font: p}
+    type: Button
+    layout_properties: {grid_position: 'KCXNHG,VDNOUH'}
+    event_bindings: {click: button_1_click}
+  - name: button_3
+    properties: {text: Activity, font: p}
+    type: Button
+    layout_properties: {grid_position: 'LFTOAG,HWXHUW'}
+    event_bindings: {click: button_3_click}
+  - name: button_2
+    properties: {text: Reports, font: p}
+    type: Button
+    layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
+    event_bindings: {click: button_2_click}
+  - name: button_2_copy
+    properties: {text: Feedback, font: p}
+    type: Button
+    layout_properties: {grid_position: 'EOITSX,OZMZUC'}
+    event_bindings: {click: button_4_click}
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FEFPZD,MWAKJP'}
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: menu.admfeedback.ItemTemplate11}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'TMMDXY,EKYZYN'}

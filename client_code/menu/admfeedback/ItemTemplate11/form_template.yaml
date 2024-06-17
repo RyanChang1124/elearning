@@ -1,0 +1,37 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: outlined_card_1
+  properties: {role: outlined-card, col_widths: '{"YKDXFO":10,"OCLDFA":50,"EVVVZA":10,"BQJMND":50,"BIZYKX":10,"IHFARW":50}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'MOEBNG,AVQHIU'}
+  components:
+  - name: label_4
+    properties: {text: 'From:'}
+    type: Label
+    layout_properties: {grid_position: 'AAVIYA,YKDXFO'}
+  - name: label_1
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'AAVIYA,OCLDFA'}
+  - name: label_5
+    properties: {text: Subject}
+    type: Label
+    layout_properties: {grid_position: 'LLWZJJ,EVVVZA'}
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'LLWZJJ,BQJMND'}
+  - name: label_6
+    properties: {text: 'Case:'}
+    type: Label
+    layout_properties: {grid_position: 'UMNQSK,BIZYKX'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UMNQSK,IHFARW'}
+  - name: check_box_1
+    properties: {text: 'Viewed?'}
+    type: CheckBox
+    layout_properties: {grid_position: 'VIRHBG,DRUJGS'}
+    event_bindings: {change: check_box_1_change}
