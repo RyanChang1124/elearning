@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: quizname
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'RGNVSE,KWYWMC'}
     components:
@@ -18,12 +18,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'BXQOVC,RBGVCN'}
   - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{}'}
+    properties: {role: outlined-card, col_widths: '{}', background: 'theme:Primary Overlay 3'}
     type: ColumnPanel
     layout_properties: {grid_position: 'IHSLFE,ABDVXU'}
     components:
     - name: grid_panel_1
-      properties: {}
+      properties: {background: 'theme:Primary Container'}
       type: GridPanel
       layout_properties: {grid_position: 'PPYPHZ,LENXHE'}
       components:

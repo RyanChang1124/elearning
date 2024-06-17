@@ -42,13 +42,14 @@ components:
       type: Image
       layout_properties: {}
   - name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Overlay 3'}
     type: ColumnPanel
     components:
     - name: label_2
       properties: {align: center, text: CLASSROOM, bold: true, font_size: 40, font: p}
       type: Label
       layout_properties: {grid_position: 'NGOXGV,TUSHAK'}
+    layout_properties: {}
   - name: repeating_panel_1
     properties: {item_template: stupage.classlist}
     type: RepeatingPanel

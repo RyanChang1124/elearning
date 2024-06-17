@@ -17,7 +17,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'MCOOTP,OOMXBL'}
   - name: deadline
-    properties: {font: p}
+    properties: {font: p, foreground: 'theme:Error'}
     type: Label
     layout_properties: {grid_position: 'MCOOTP,XIYMHJ'}
     data_bindings:

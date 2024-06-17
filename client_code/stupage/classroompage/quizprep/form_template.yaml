@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'KDFBQA,MPDTMD'}
     components:
@@ -19,7 +19,7 @@ components:
       layout_properties: {grid_position: 'NUWBUK,USNEOZ'}
       components:
       - name: quizname
-        properties: {font_size: 22, align: center, font: p}
+        properties: {font_size: 22, align: center, font: p, background: 'theme:On Primary'}
         type: Label
         layout_properties: {}
         data_bindings:

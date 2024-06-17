@@ -9,12 +9,12 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{"NVGAZE":50,"XGMOJS":10}'}
+    properties: {role: outlined-card, col_widths: '{"NVGAZE":50,"XGMOJS":10}', background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'RROIXY,DNLYOB'}
     components:
     - name: question_label
-      properties: {align: center, font_size: 22, font: p}
+      properties: {align: center, font_size: 22, font: p, background: 'theme:On Primary'}
       type: Label
       layout_properties: {grid_position: 'UNNMUH,NVGAZE'}
     - name: outlined_card_4
@@ -27,7 +27,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'LHSYZH,ZDCPQE'}
     - name: score_label
-      properties: {align: center, text: '', font: p}
+      properties: {align: center, text: '', font: p, background: 'theme:On Primary'}
       type: Label
       layout_properties: {grid_position: 'XOCYPO,DLJCFV'}
   - name: outlined_card_3

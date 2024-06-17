@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'SFESHF,WVRVWV'}
     components:
@@ -18,7 +18,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'SQXLLC,VTAULW'}
   - name: outlined_card_2
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary'}
     type: ColumnPanel
     layout_properties: {grid_position: 'JQYPFY,CINRXC'}
     components:

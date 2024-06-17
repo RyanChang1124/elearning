@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'XDTBCE,BZEPYQ'}
     components:
@@ -22,7 +22,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QDXIOO,FNQYPQ'}
     - name: label_5
-      properties: {align: center, text: 'What will be your username?', font_size: 22, font: p, bold: false, underline: false}
+      properties: {align: center, text: 'What will be your username?', font_size: 22, font: p, bold: false, underline: false, border: '10', background: 'theme:On Primary'}
       type: Label
       layout_properties: {grid_position: 'OCVTZE,WXQAIS'}
     - name: outlined_1
@@ -30,7 +30,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'FCUICG,BFEWTH'}
     - name: outlined_button_1
-      properties: {text: Submit, role: outlined-button, font: p}
+      properties: {text: Submit, role: outlined-button, font: p, background: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'KGEJUZ,ZSZYDP'}
       event_bindings: {click: outlined_button_1_click}

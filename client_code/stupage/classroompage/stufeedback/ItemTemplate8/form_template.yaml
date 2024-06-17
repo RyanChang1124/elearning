@@ -4,18 +4,18 @@ container:
   properties: {col_widths: '{"ENHZOI":70,"FFCFBA":10}'}
 components:
 - name: Subject
-  properties: {}
+  properties: {font: p}
   type: TextBox
   layout_properties: {grid_position: 'QLKJCO,SZGFYX'}
 - name: response
-  properties: {}
+  properties: {font: p}
   type: Label
   layout_properties: {grid_position: 'IZIDJB,CVMMRX'}
 - name: button_1
-  properties: {text: Save}
+  properties: {text: Save, font: p}
   type: Button
   layout_properties: {grid_position: 'UNPVYL,ENHZOI'}
 - name: button_2
-  properties: {text: Delete}
+  properties: {text: Delete, font: p}
   type: Button
   layout_properties: {grid_position: 'UNPVYL,FFCFBA'}
