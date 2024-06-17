@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: quizname
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Secondary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'RGNVSE,KWYWMC'}
     components:
@@ -47,29 +47,29 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZZFZZJ,ADOKDH RWLAST,REZEZO'}
   - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{}'}
+    properties: {role: outlined-card, col_widths: '{}', background: 'theme:Primary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'IHSLFE,ABDVXU'}
     components:
     - name: grid_panel_1
-      properties: {}
+      properties: {background: 'theme:Outline'}
       type: GridPanel
       layout_properties: {grid_position: 'PPYPHZ,LENXHE'}
       components:
       - name: label_3
-        properties: {text: Rank, bold: true, underline: true, font: p}
+        properties: {text: Rank, bold: true, underline: true, font: p, background: '', foreground: 'theme:On Primary Container'}
         type: Label
         layout_properties: {row: QKHDCV, width_xs: 1, col_xs: 0}
       - name: label_4
-        properties: {text: 'Student ', bold: true, underline: true, font: p}
+        properties: {text: 'Student ', bold: true, underline: true, font: p, foreground: 'theme:On Primary Container'}
         type: Label
         layout_properties: {row: QKHDCV, width_xs: 3, col_xs: 2}
       - name: label_5
-        properties: {text: Perk, bold: true, underline: true, font: p}
+        properties: {text: Perk, bold: true, underline: true, font: p, background: '', foreground: 'theme:On Primary Container'}
         type: Label
         layout_properties: {row: QKHDCV, width_xs: 1, col_xs: 7}
       - name: label_6
-        properties: {text: Score, bold: true, underline: true, font: p}
+        properties: {text: Score, bold: true, underline: true, font: p, foreground: 'theme:On Primary Container'}
         type: Label
         layout_properties: {row: QKHDCV, width_xs: 1, col_xs: 9}
     - name: repeating_panel_1

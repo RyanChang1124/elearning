@@ -44,12 +44,12 @@ components:
   - name: xy_panel_1
     properties: {height: 335, align: left, width: 2000}
     type: XYPanel
-    layout_properties: {grid_position: 'VUTRVL,NAGWZE', row_background: ''}
+    layout_properties: {grid_position: 'VUTRVL,QPEACZ'}
     components:
     - name: image_1
       properties: {source: _/theme/image (1).png, display_mode: zoom_to_fill, height: 350.6666259765625}
       type: Image
-      layout_properties: {x: 3.3645884208381176, y: 0.7083384208381176, width: 756.1666259765625}
+      layout_properties: {x: 0, y: 0, width: 709}
     - name: label_1
       properties:
         text: |-
@@ -61,4 +61,4 @@ components:
         background: ''
         foreground: theme:On Primary
       type: Label
-      layout_properties: {x: 344.12499491497874, y: 69.79168192669749, width: 440}
+      layout_properties: {x: 321.5833384208381, y: 84.57293192669749, width: 440}

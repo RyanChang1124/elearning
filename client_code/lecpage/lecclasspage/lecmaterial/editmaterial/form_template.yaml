@@ -9,24 +9,24 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: 'theme:Primary Overlay 2'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AHOMQK,IWTRXU'}
     components:
     - name: label_3
-      properties: {text: 'Material Name:', bold: true}
+      properties: {text: 'Material Name:', bold: true, foreground: '', background: ''}
       type: Label
       layout_properties: {grid_position: 'CZDYBE,GQKHOO'}
     - name: title_box
-      properties: {role: outlined, placeholder: '...'}
+      properties: {role: outlined, placeholder: '...', background: 'theme:On Primary'}
       type: TextBox
       layout_properties: {grid_position: 'ZMJBRE,LCVNKU'}
     - name: label_4
-      properties: {text: 'Material Content:', bold: true}
+      properties: {text: 'Material Content:', bold: true, background: ''}
       type: Label
       layout_properties: {grid_position: 'RJQXUA,WQOSGM'}
     - name: desc_box
-      properties: {role: outlined, placeholder: '...'}
+      properties: {role: outlined, placeholder: '...', background: 'theme:On Primary'}
       type: TextBox
       layout_properties: {grid_position: 'DHPLUX,QHJOIC'}
     - name: creation
@@ -43,7 +43,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'GEQVDH,XNSSLL'}
     - name: save_button
-      properties: {text: Save, role: outlined-button, font: p}
+      properties: {text: Save, role: outlined-button, font: p, background: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'SAYXVV,IRXHCR'}
       event_bindings: {click: save_button_click}
