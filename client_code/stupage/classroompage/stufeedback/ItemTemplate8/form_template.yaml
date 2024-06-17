@@ -7,10 +7,14 @@ components:
   properties: {font: p}
   type: TextBox
   layout_properties: {grid_position: 'QLKJCO,SZGFYX'}
+  data_bindings:
+  - {property: text, code: 'self.item[''content'']', writeback: false}
 - name: response
   properties: {font: p}
   type: Label
   layout_properties: {grid_position: 'IZIDJB,CVMMRX'}
+  data_bindings:
+  - {property: text, code: 'self.item[''response'']', writeback: false}
 - name: button_1
   properties: {text: Save, font: p}
   type: Button

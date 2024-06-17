@@ -45,3 +45,8 @@ class classroompage(classroompageTemplate):
   def email_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('stupage.classroompage.stuemail',classnow)
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    global classnow
+    open_form('stupage.classroompage.stufeedback',classnow)

@@ -73,6 +73,7 @@ class newpage(newpageTemplate):
     newrole = 'Student'
     anvil.server.call('newuservalue','role','Lecturer')
     anvil.server.call('newuservalue','username',newusername)
+    anvil.server.call('newuservalue','name',newname)
     anvil.server.call('newuservalue','setup_complete',True)
     newrole = 'Lecturer'
     self.outlined_card_3.visible = False
