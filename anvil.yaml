@@ -38,9 +38,6 @@ db_schema:
     - name: response
       admin_ui: {width: 200, order: 3}
       type: string
-    - name: feedbackcode
-      admin_ui: {width: 200, order: 0.5}
-      type: number
     - name: classcode
       admin_ui: {width: 200, order: -0.5}
       type: number

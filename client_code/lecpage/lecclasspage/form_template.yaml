@@ -54,6 +54,11 @@ components:
     properties: {text: Classroom, font: p, font_size: 16}
     type: Label
     layout_properties: {}
+  - name: button_1
+    properties: {text: Student's Feedback}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
   - name: Materials
     properties: {text: Materials, font: p}
     type: Button
