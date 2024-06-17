@@ -26,7 +26,7 @@ startup_form: null
 native_deps: {head_html: ''}
 db_schema:
   feedback:
-    client: none
+    client: full
     server: full
     columns:
     - name: student

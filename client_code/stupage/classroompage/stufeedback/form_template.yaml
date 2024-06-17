@@ -21,6 +21,7 @@ components:
       properties: {text: New Feedback, font: p}
       type: Button
       layout_properties: {grid_position: 'MSBDDV,JVSEGQ'}
+      event_bindings: {click: button_1_click}
   - name: repeating_panel_1
     properties: {item_template: stupage.classroompage.stufeedback.ItemTemplate8}
     type: RepeatingPanel

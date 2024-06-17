@@ -1,25 +1,35 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ENHZOI":70,"FFCFBA":10}'}
+  properties: {col_widths: '{}'}
 components:
-- name: Subject
-  properties: {font: p}
-  type: TextBox
-  layout_properties: {grid_position: 'QLKJCO,SZGFYX'}
-  data_bindings:
-  - {property: text, code: 'self.item[''content'']', writeback: false}
-- name: response
-  properties: {font: p}
-  type: Label
-  layout_properties: {grid_position: 'IZIDJB,CVMMRX'}
-  data_bindings:
-  - {property: text, code: 'self.item[''response'']', writeback: false}
-- name: button_1
-  properties: {text: Save, font: p}
-  type: Button
-  layout_properties: {grid_position: 'UNPVYL,ENHZOI'}
-- name: button_2
-  properties: {text: Delete, font: p}
-  type: Button
-  layout_properties: {grid_position: 'UNPVYL,FFCFBA'}
+- name: outlined_card_1
+  properties: {role: outlined-card, col_widths: '{"QFYOQW":50,"OYUOSC":10}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'OTSCDK,JNZUKP'}
+  components:
+  - name: Subject
+    properties: {font: p}
+    type: TextBox
+    layout_properties: {grid_position: 'LWTRFH,UCLXLK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''content'']', writeback: false}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PFLIRQ,ELLFNX'}
+    components:
+    - name: response
+      properties: {font: p}
+      type: Label
+      layout_properties: {grid_position: 'PKEUJS,KAARBP'}
+      data_bindings:
+      - {property: text, code: 'self.item[''response'']', writeback: false}
+  - name: button_1
+    properties: {text: Save, font: p}
+    type: Button
+    layout_properties: {grid_position: 'WVAYRP,QFYOQW'}
+  - name: button_2
+    properties: {text: Delete, font: p}
+    type: Button
+    layout_properties: {grid_position: 'WVAYRP,OYUOSC'}
