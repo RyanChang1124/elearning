@@ -64,6 +64,11 @@ components:
     type: Button
     layout_properties: {}
     event_bindings: {click: Materials_click}
+  - name: button_2
+    properties: {text: Main Menu}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: button_2_click}
   - name: log
     properties: {text: Log Out, font: p, bold: true}
     type: Button
