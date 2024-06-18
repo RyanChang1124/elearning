@@ -7,31 +7,31 @@ components:
   layout_properties: {grid_position: 'MOEBNG,AVQHIU'}
   components:
   - name: label_4
-    properties: {text: 'From:'}
+    properties: {text: 'From:', font: p}
     type: Label
     layout_properties: {grid_position: 'AAVIYA,YKDXFO'}
   - name: label_1
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'AAVIYA,OCLDFA'}
   - name: label_5
-    properties: {text: Subject}
+    properties: {text: Subject, font: p}
     type: Label
     layout_properties: {grid_position: 'LLWZJJ,EVVVZA'}
   - name: label_2
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'LLWZJJ,BQJMND'}
   - name: label_6
-    properties: {text: 'Case:'}
+    properties: {text: 'Case:', font: p}
     type: Label
     layout_properties: {grid_position: 'UMNQSK,BIZYKX'}
   - name: label_3
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'UMNQSK,IHFARW'}
   - name: check_box_1
-    properties: {text: 'Viewed?'}
+    properties: {text: 'Viewed?', font: p}
     type: CheckBox
     layout_properties: {grid_position: 'VIRHBG,DRUJGS'}
     event_bindings: {change: check_box_1_change}

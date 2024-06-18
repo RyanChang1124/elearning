@@ -27,19 +27,20 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'ZEXWNR,AEDSMC'}
     - name: confirmation
-      properties: {text: Confirm, role: outlined-button, font: p}
+      properties: {text: Confirm, role: outlined-button, font: p, background: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'ZOEMHE,NAHURE'}
       event_bindings: {click: confirmation_click}
   - name: perk
-    properties: {role: outlined-card, visible: false}
+    properties: {role: outlined-card, visible: false, background: 'theme:Tertiary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'HFJTAW,JNZUUP'}
     components:
     - name: label_4
-      properties: {align: center, bold: true, text: 'Select Your Perk:', font: p, font_size: 30}
+      properties: {align: center, bold: true, text: 'Select Your Perk:', font: p, font_size: 30, background: ''}
       type: Label
       layout_properties: {grid_position: 'FBDLUQ,EJEMRJ'}
+      data_bindings: []
     - name: link_1
       properties: {}
       type: Link
@@ -47,12 +48,12 @@ components:
       event_bindings: {click: link_1_click}
       components:
       - name: grid_panel_1
-        properties: {}
+        properties: {background: 'theme:On Primary'}
         type: GridPanel
         layout_properties: {grid_position: 'RUPPOE,AEUBOR'}
         components:
         - name: image_1
-          properties: {height: 194, source: _/theme/icons8-time-100.png}
+          properties: {height: 194, source: _/theme/icons8-time-100.png, visible: true, background: 'theme:On Primary'}
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5
@@ -63,6 +64,8 @@ components:
 
               Upgrades increase the percentage of extra time provided.
             font: p
+            bold: false
+            underline: false
           type: Label
           layout_properties: {row: KXUYQC, width_xs: 8, col_xs: 4}
     - name: link_2
@@ -72,12 +75,12 @@ components:
       event_bindings: {click: link_2_click}
       components:
       - name: grid_panel_1_copy
-        properties: {}
+        properties: {background: 'theme:On Primary'}
         type: GridPanel
         layout_properties: {grid_position: 'RUPPOE,AEUBOR'}
         components:
         - name: image_1_copy
-          properties: {height: 194, source: _/theme/icons8-fast-forward-100.png}
+          properties: {height: 194, source: _/theme/icons8-fast-forward-100.png, background: 'theme:On Primary'}
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5_copy
@@ -97,12 +100,12 @@ components:
       event_bindings: {click: link_3_click}
       components:
       - name: grid_panel_1_copy_copy
-        properties: {}
+        properties: {background: 'theme:On Primary'}
         type: GridPanel
         layout_properties: {grid_position: 'RUPPOE,AEUBOR'}
         components:
         - name: image_1_copy_copy
-          properties: {height: 194, source: _/theme/icons8-retry-100.png}
+          properties: {height: 194, source: _/theme/icons8-retry-100.png, background: 'theme:On Primary'}
           type: Image
           layout_properties: {row: KXUYQC, width_xs: 4, col_xs: 0}
         - name: label_5_copy_copy
