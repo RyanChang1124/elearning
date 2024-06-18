@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_3
-    properties: {text: Students Portal, font: p, font_size: 16}
+    properties: {text: Students Portal, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: button_3
@@ -28,12 +28,12 @@ components:
   layout_properties: {slot: default}
   components:
   - name: student
-    properties: {font: p, bold: true, background: 'theme:On Primary'}
+    properties: {font: p, bold: true, background: ''}
     type: Label
     data_bindings: []
     layout_properties: {}
   - name: rich_text_1
-    properties: {content: '', background: 'theme:On Primary', border: '100', foreground: 'theme:On Primary Container'}
+    properties: {content: '', background: '', border: '100', foreground: 'theme:On Primary Container'}
     type: RichText
     layout_properties: {}
     components:

@@ -60,7 +60,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_3
-    properties: {text: Classroom, font: p, font_size: 16}
+    properties: {text: Classroom, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: button_3
