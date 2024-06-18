@@ -63,7 +63,7 @@ components:
     type: FileLoader
     layout_properties: {grid_position: 'CTYSHZ,EJUAVI'}
   - name: label_5
-    properties: {text: 'Time:', font: p, bold: true}
+    properties: {text: 'Time:', font: p, bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'ZUQTXQ,DLVJHD'}
   - name: numeric_box_time
@@ -73,7 +73,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''time'']', writeback: false}
   - name: label_6
-    properties: {text: 'Points:', font: p, bold: true}
+    properties: {text: 'Points:', font: p, bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'VGPDYP,TFPLAR'}
   - name: numeric_box_questionweight

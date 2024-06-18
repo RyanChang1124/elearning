@@ -18,7 +18,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Reports, font: p}
+    properties: {text: Reports, font: p, bold: true}
     type: Label
     layout_properties: {}
 - name: column_panel_1

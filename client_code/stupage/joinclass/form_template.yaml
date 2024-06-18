@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Primary Overlay 3'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -128,7 +128,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Join a new class, font: p, font_size: 16}
+    properties: {text: Join a new class, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: button_1

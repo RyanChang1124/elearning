@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Primary Overlay 3'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -14,7 +14,7 @@ components:
     layout_properties: {grid_position: 'RGNVSE,KWYWMC'}
     components:
     - name: label_7
-      properties: {bold: true, font_size: 25, align: center}
+      properties: {bold: true, font_size: 40, align: center}
       type: Label
       layout_properties: {grid_position: 'BXQOVC,RBGVCN'}
   - name: outlined_card_2
@@ -47,7 +47,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZZFZZJ,ADOKDH RWLAST,REZEZO'}
   - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{}', background: 'theme:Primary Overlay 2'}
+    properties: {role: outlined-card, col_widths: '{}', background: 'theme:On Primary'}
     type: ColumnPanel
     layout_properties: {grid_position: 'IHSLFE,ABDVXU'}
     components:
@@ -82,7 +82,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Quiz Leaderboard, font: p, font_size: 16}
+    properties: {text: Quiz Leaderboard, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: outlined_button_1

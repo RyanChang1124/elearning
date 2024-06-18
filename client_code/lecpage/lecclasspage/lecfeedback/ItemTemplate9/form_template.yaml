@@ -7,7 +7,7 @@ components:
   layout_properties: {grid_position: 'FUSBTL,TSHONK'}
   components:
   - name: subject
-    properties: {}
+    properties: {font: p, bold: true, font_size: 25}
     type: Label
     layout_properties: {grid_position: 'ZJZCQZ,XHPKRQ'}
     data_bindings:
@@ -18,7 +18,7 @@ components:
     layout_properties: {grid_position: 'PFLIRQ,ELLFNX'}
     components:
     - name: response
-      properties: {}
+      properties: {font: p}
       type: TextBox
       layout_properties: {grid_position: 'YVQZUF,WTDKTH'}
       data_bindings:

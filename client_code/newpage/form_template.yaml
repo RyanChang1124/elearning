@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Primary Overlay 3'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -17,6 +17,10 @@ components:
       properties: {text: Welcome, font_size: 40, bold: true, icon_align: top, align: left}
       type: Label
       layout_properties: {grid_position: 'CDUIVH,HZZAUC'}
+    - name: image_2
+      properties: {height: 88, source: _/theme/waving-hand-icon-emoji-sticker-free-png.webp, display_mode: shrink_to_fit, horizontal_align: right}
+      type: Image
+      layout_properties: {grid_position: 'CDUIVH,PFAXSG'}
     - name: label_4
       properties: {text: Let's get started!, italic: false, font: p}
       type: Label
@@ -44,7 +48,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'BLDGVK,BHUEFF'}
     - name: outlined_2
-      properties: {role: outlined, align: center, placeholder: '...'}
+      properties: {role: outlined, align: center, placeholder: '...', font: p, font_size: 30}
       type: TextBox
       layout_properties: {grid_position: 'CLTVSE,MEDWNT'}
     - name: outlined_button_2
@@ -62,7 +66,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RJUNLG,JFCCLR'}
     - name: outlined_button_3
-      properties: {text: Student, role: outlined-button, font: p}
+      properties: {text: Student, role: outlined-button, font: p, font_size: 25}
       type: Button
       layout_properties: {grid_position: 'WDVZKY,ERLLYF'}
       event_bindings: {click: outlined_button_3_click}
@@ -71,12 +75,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'PHLSVV,RFEMVJ'}
     - name: outlined_button_4
-      properties: {text: Lecturer, role: outlined-button, font: p}
+      properties: {text: Lecturer, role: outlined-button, font: p, font_size: 25}
       type: Button
       layout_properties: {grid_position: 'BZGWMC,ZDGWCD'}
       event_bindings: {click: outlined_button_4_click}
     - name: label_9
-      properties: {text: '?', align: center, font: p}
+      properties: {text: '?', align: center, font: p, font_size: 20}
       type: Label
       layout_properties: {grid_position: 'BJFCZB,YBRZBM'}
   - name: outlined_card_4
@@ -92,13 +96,17 @@ components:
       properties: {align: center, text: redirecting to portal..., font: p}
       type: Label
       layout_properties: {grid_position: 'RHXQSJ,GOYUPA'}
+    - name: image_3
+      properties: {source: _/theme/360_F_598121274_MqYSUaLSBNX2wgqukxlFI6KWMecFTp9F.jpg}
+      type: Image
+      layout_properties: {grid_position: 'IBUUCV,YIUGGD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: New User, font_size: 16, font: p}
+    properties: {text: New User, font_size: 16, font: p, bold: true}
     type: Label
     layout_properties: {}
 - name: image_1

@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Primary Overlay 3'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -27,7 +27,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'AERNQC,TGEFHU'}
     - name: classname
-      properties: {role: outlined, placeholder: '...'}
+      properties: {role: outlined, placeholder: '...', font: p}
       type: TextBox
       layout_properties: {grid_position: 'VHZKGG,AVCVJY'}
   - name: outlined_card_2
@@ -57,7 +57,7 @@ components:
       layout_properties: {grid_position: 'MGMHEJ,QUNEFF'}
       data_bindings: []
   - name: createclass
-    properties: {text: Create Your Class, role: outlined-button, font: p}
+    properties: {text: Create Your Class, role: outlined-button, font: p, background: 'theme:On Primary'}
     type: Button
     layout_properties: {grid_position: 'JABOIF,SJBBIU'}
     event_bindings: {click: createclass_click}
@@ -67,7 +67,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Create a Classroom, foreground: 'theme:On Primary Container', font: p, font_size: 16}
+    properties: {text: Create a Classroom, foreground: 'theme:On Primary Container', font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: outlined_button_1

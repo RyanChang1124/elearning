@@ -7,7 +7,7 @@ components:
   layout_properties: {grid_position: 'VPYHSW,JNVVNB'}
   components:
   - name: qname
-    properties: {font: p}
+    properties: {font: p, bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'ORYSGU,BSZSWQ'}
     data_bindings:
