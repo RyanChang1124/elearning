@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: 'theme:Primary Overlay 3'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -31,7 +31,7 @@ components:
       data_bindings:
       - {property: text, code: 'self.materiallist[''desc'']', writeback: false}
     - name: outlined_button_1
-      properties: {text: Download Attachment, role: outlined-button, visible: false, font: p}
+      properties: {text: Download Attachment, role: outlined-button, visible: false, font: p, background: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'JAZHZT,DMOGLA'}
       event_bindings: {click: outlined_button_1_click}
@@ -41,7 +41,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_1
-    properties: {text: Return, font: p}
+    properties: {text: Return, font: p, bold: false, border: '3', visible: true}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
