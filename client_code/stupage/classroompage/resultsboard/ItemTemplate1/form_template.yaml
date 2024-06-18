@@ -15,7 +15,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''rank'']', writeback: false}
   - name: studentname
-    properties: {font: p, bold: true}
+    properties: {font: p, bold: true, font_size: 20}
     type: Label
     layout_properties: {row: HWYRWP, width_xs: 3, col_xs: 2}
     data_bindings:
@@ -25,7 +25,7 @@ components:
     type: Image
     layout_properties: {row: HWYRWP, width_xs: 1, col_xs: 7}
   - name: pointsbar
-    properties: {font: p, bold: true}
+    properties: {font: p, bold: true, foreground: 'theme:Secondary'}
     type: Label
     layout_properties: {row: HWYRWP, width_xs: 3, col_xs: 9}
     data_bindings:
