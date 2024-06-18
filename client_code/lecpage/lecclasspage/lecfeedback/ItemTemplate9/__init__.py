@@ -20,3 +20,7 @@ class ItemTemplate9(ItemTemplate9Template):
     """This method is called when the button is clicked"""
     self.item['response'] = self.Subject.text
     alert("Response Saved!")
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
