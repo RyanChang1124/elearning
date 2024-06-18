@@ -33,7 +33,7 @@ components:
     data_bindings: []
     layout_properties: {}
   - name: rich_text_1
-    properties: {content: '', background: 'theme:On Primary'}
+    properties: {content: '', background: 'theme:On Primary', border: '100', foreground: 'theme:On Primary Container'}
     type: RichText
     layout_properties: {}
     components:
