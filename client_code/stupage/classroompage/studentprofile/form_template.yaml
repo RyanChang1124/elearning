@@ -8,6 +8,15 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: xy_panel_1
+    properties: {height: 100}
+    type: XYPanel
+    layout_properties: {grid_position: 'OYZXMC,ENDMUU'}
+    components:
+    - name: image_3
+      properties: {height: 104.33331298828125, source: _/theme/long.jpg, display_mode: zoom_to_fill}
+      type: Image
+      layout_properties: {x: 0, y: 0, width: 747.666251953125}
   - name: outlined_card_2
     properties: {role: outlined-card, col_widths: '{"IEKHOZ":15,"RNNYOB":45,"PDSEHU":15,"BVZJRV":45,"DQXMQM":15,"ZKJCBO":45,"KKTTWZ":15,"SVNYAG":45}'}
     type: ColumnPanel

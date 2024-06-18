@@ -46,6 +46,10 @@ components:
     type: XYPanel
     layout_properties: {grid_position: 'VUTRVL,QPEACZ'}
     components:
+    - name: image_1
+      properties: {source: _/theme/image (1).png, display_mode: zoom_to_fill, height: 350.6666259765625}
+      type: Image
+      layout_properties: {x: 0, y: 0, width: 709}
     - name: label_1
       properties:
         text: |-
