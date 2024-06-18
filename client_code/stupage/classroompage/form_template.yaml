@@ -32,6 +32,15 @@ components:
       type: Button
       layout_properties: {grid_position: 'ZMYZHT,LZZFQN'}
       event_bindings: {click: email_click}
+  - name: outlined_card_4
+    properties: {role: outlined-card, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DBHIEP,WEUSAT'}
+    components:
+    - name: image_2
+      properties: {source: _/theme/609.jpg, height: 290, display_mode: fill_width}
+      type: Image
+      layout_properties: {grid_position: 'DAJKAN,OMGODE'}
   - name: outlined_card_2
     properties: {role: outlined-card}
     type: ColumnPanel
