@@ -31,6 +31,9 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: label_2
+    properties: {}
+    type: Label
   - name: outlined_button_1
     properties: {text: Return, role: outlined-button, font: p}
     type: Button
