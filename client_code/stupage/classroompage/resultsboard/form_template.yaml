@@ -62,7 +62,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Quiz Leaderboard, font: p, font_size: 16}
+    properties: {text: Quiz Leaderboard, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: outlined_button_1

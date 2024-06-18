@@ -141,7 +141,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: label_2
-    properties: {text: Quiz, font: p, font_size: 16}
+    properties: {text: Quiz, font: p, font_size: 16, bold: true}
     type: Label
     layout_properties: {}
   - name: user
