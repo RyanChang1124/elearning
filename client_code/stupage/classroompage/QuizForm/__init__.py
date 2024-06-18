@@ -219,6 +219,9 @@ class QuizForm(QuizFormTemplate):
       """This method is called when the button is clicked"""
       classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
       targetquiz = app_tables.quizzes.get(quizcode=quizcoderem)
-      targetquiz['reports'] +=1
+      if targetquiz['reports'] is None:
+        targetquiz['reports'] = 1
+      else:
+        targetquiz['reports'] += 1
       open_form('stupage.classroompage',classtoreturn)
       
