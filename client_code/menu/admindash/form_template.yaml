@@ -64,6 +64,11 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: outlined_button_1
+    properties: {text: Log Out, role: filled-button}
+    type: Button
+    event_bindings: {click: buttonlog_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel

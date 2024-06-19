@@ -28,7 +28,8 @@ class quizedit(quizeditTemplate):
           quizname="",
           lecturer="",
           endtime=None,
-          available=False
+          available=False,
+          reports=0
       )
     else:  # Existing quiz
         self.quiz = app_tables.quizzes.get(quizcode=quiz_code)

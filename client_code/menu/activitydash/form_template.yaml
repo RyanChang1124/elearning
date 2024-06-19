@@ -39,6 +39,11 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: outlined_button_1
+    properties: {text: Log Out, role: filled-button}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: buttonlog_click}
   - name: rich_text_1
     properties: {content: Activity, font: p, align: left}
     type: RichText

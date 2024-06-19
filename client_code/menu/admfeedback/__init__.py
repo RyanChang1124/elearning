@@ -29,4 +29,8 @@ class admfeedback(admfeedbackTemplate):
     """This method is called when the button is clicked"""
     open_form("menu.reports")
 
+  def buttonlog_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('menu')
+
 

@@ -28,3 +28,9 @@ class activitydash(activitydashTemplate):
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("menu.admfeedback")
+
+
+  def buttonlog_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('menu')
+
