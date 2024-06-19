@@ -46,7 +46,8 @@ class lecclasspage(lecclasspageTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form()
+    global classcode
+    open_form("lecpage.lecclasspage.lecfeedback",classcode)
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
