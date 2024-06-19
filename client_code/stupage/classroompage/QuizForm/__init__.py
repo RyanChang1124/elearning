@@ -34,7 +34,15 @@ class QuizForm(QuizFormTemplate):
         self.user.text = self.student['student']
         self.perk = self.student['perk']
         self.level = self.student['level']
-
+        if self.student['perk'] == "time":
+          self.image_4.source = "_/theme/icons8-time-100.png"
+          self.label_1.text = "Extra Time"
+        elif self.student['perk'] == "conf":
+          self.image_4.source = "_/theme/icons8-fast-forward-100.png"
+          self.label_1.text = "Point Streak"
+        elif self.student["perk"] == "chance":
+          self.image_4.source = "_/theme/icons8-retry-100.png"
+          self.label_1.text = "Second Chance"
 
         # Start the quiz
         self.current_question_index = 0
