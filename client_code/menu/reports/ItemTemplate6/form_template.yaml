@@ -2,13 +2,13 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: label_1
-  properties: {font: p}
+  properties: {font: p, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'PKOJPX,FUQOMT'}
   data_bindings:
   - {property: text, code: 'self.item[''quizname'']', writeback: false}
 - name: label_2
-  properties: {font: p}
+  properties: {font: p, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'PKOJPX,QCFMDX'}
   data_bindings:
@@ -19,7 +19,7 @@ components:
   layout_properties: {grid_position: 'PKOJPX,GYZFLO'}
   data_bindings: []
 - name: label_4
-  properties: {font: p}
+  properties: {font: p, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'PKOJPX,MMHMQO'}
   data_bindings:
