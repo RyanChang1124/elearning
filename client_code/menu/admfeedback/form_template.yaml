@@ -50,7 +50,7 @@ components:
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
     event_bindings: {click: button_2_click}
   - name: button_2_copy
-    properties: {text: Feedback, font: p}
+    properties: {text: Feedback, font: p, bold: true}
     type: Button
     layout_properties: {grid_position: 'EOITSX,OZMZUC'}
     event_bindings: {click: button_4_click}
