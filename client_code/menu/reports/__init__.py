@@ -38,4 +38,5 @@ class reports(reportsTemplate):
 
   def buttonlog_click(self, **event_args):
     """This method is called when the button is clicked"""
+    anvil.users.logout()
     open_form('menu')
