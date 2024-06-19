@@ -18,7 +18,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RAXJBQ,SWTSET'}
     - name: usercount
-      properties: {font: p, bold: true}
+      properties: {font: p, bold: true, font_size: 40, foreground: 'theme:On Primary Container'}
       type: Label
       layout_properties: {grid_position: 'OKGPUD,EPLCZJ'}
   - name: outlined_card_2
@@ -31,7 +31,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'GAYUKO,EAZHHM'}
     - name: stucount
-      properties: {font: p, bold: true}
+      properties: {font: p, bold: true, foreground: 'theme:On Primary Container', font_size: 40}
       type: Label
       layout_properties: {grid_position: 'SLJTON,PLQDMY'}
   - name: outlined_card_3
@@ -44,7 +44,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'FNIPNQ,EEKWOG'}
     - name: leccount
-      properties: {font: p, bold: true}
+      properties: {font: p, bold: true, foreground: 'theme:On Primary Container', font_size: 40}
       type: Label
       layout_properties: {grid_position: 'LYMBSB,YQFTQQ'}
   - name: outlined_card_4
