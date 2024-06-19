@@ -1,0 +1,39 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'MIWKAT,BJSVOL'}
+  data_bindings:
+  - {property: text, code: 'self.item[''question'']', writeback: false}
+- name: label_2
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'GIZSIY,PIHIYP'}
+  data_bindings:
+  - {property: text, code: 'self.item[''optiona'']', writeback: false}
+- name: label_3
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'TSAOLR,KSKAOW'}
+  data_bindings:
+  - {property: text, code: 'self.item[''optionb'']', writeback: false}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'TBTPXV,TFCABB'}
+  data_bindings:
+  - {property: text, code: 'self.item[''optionc'']', writeback: false}
+- name: label_5
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'MEJJDP,XALPOS'}
+  data_bindings:
+  - {property: text, code: 'self.item[''optiond'']', writeback: false}
+- name: image_1
+  properties: {}
+  type: Image
+  layout_properties: {grid_position: 'OGJJJA,MUJJHG'}
+  data_bindings:
+  - {property: source, code: 'self.item[''image'']', writeback: false}
