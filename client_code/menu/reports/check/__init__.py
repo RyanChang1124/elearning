@@ -14,7 +14,7 @@ class check(checkTemplate):
     self.quizcode = quizid
     self.label_1.text = app_tables.quizzes.get(quizcode=quizid)['quizname']
     # Set Form properties and Data Bindings.
-    self.repeating_panel_1.items = app_tables.quizcontent.search()(quizcode=quizid)
+    self.repeating_panel_1.items = app_tables.quizcontent.search(quizcode=quizid)
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
