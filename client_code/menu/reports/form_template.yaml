@@ -44,7 +44,7 @@ components:
     layout_properties: {grid_position: 'LFTOAG,HWXHUW'}
     event_bindings: {click: button_3_click}
   - name: button_2
-    properties: {text: Reports, font: p}
+    properties: {text: Reports, font: p, bold: true}
     type: Button
     layout_properties: {grid_position: 'KSXMOW,JIVBXS'}
     event_bindings: {click: button_2_click}
