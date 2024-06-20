@@ -49,7 +49,7 @@ components:
     layout_properties: {grid_position: 'RYCQJJ,SHIQDF'}
     components:
     - name: image_1
-      properties: {height: 105}
+      properties: {height: 105, display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'ASTZVD,DAEYXF'}
   - name: outlined_card_2
@@ -91,10 +91,6 @@ components:
       properties: {align: center, font: p, bold: true, font_size: 30}
       type: Label
       layout_properties: {grid_position: 'XYQRGF,NLWUZJ'}
-    - name: image_3
-      properties: {height: 119.6666259765625, source: _/theme/istockphoto-1473498723-612x612.jpg}
-      type: Image
-      layout_properties: {grid_position: 'MCEVDY,DYPZXG'}
   - name: ending
     properties: {role: outlined-card, visible: false, col_widths: '{"MOWIBO":50,"IGYWHT":10}'}
     type: ColumnPanel
