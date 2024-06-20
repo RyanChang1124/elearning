@@ -11,7 +11,7 @@ services:
   server_config: {enc_delegation_refresh_token: AB0V15HCa4u1vPc4drbNW1RDi416m48PoXndjC1t/WNpENAJW3VQnAVMTlF0LpRLw6pkWvE/XM1se/oTub5ZSdCc7H3ob3/+emUgmjTQBV/Ycd3aUX84ISveEiR1HTUTKvo62nolp6StnX9JO7wq30JGxA8/NXPgQENhybEFPCfN13SvOG/NV5Co30mDSzagFCGWpbpFWwUusN4ZNieaRDdNOp6sFrZ3XKwnAHikpk1lgYhsFrAZT9LlwA/9/OOCjOu2IWD/RELfjw7ZfuItzDfvxtojCTcSdy0ILqIWQCfUvABKVZ/5JeJa+W0Pyg==}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {test_mode: true}
+  server_config: {test_mode: false}
 startup: {type: form, module: menu}
 package_name: ELEARNING
 allow_embedding: false
