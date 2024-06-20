@@ -55,7 +55,7 @@ components:
     type: Label
     layout_properties: {}
   - name: button_1
-    properties: {text: Student's Feedback}
+    properties: {text: Student's Feedback, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
@@ -65,7 +65,7 @@ components:
     layout_properties: {}
     event_bindings: {click: Materials_click}
   - name: button_2
-    properties: {text: Main Menu}
+    properties: {text: Main Menu, font: p}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_2_click}

@@ -7,31 +7,31 @@ components:
   layout_properties: {grid_position: 'FDFEZE,QFDGOL'}
   components:
   - name: label_1
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'GKCBEE,ESGIKX'}
     data_bindings:
     - {property: text, code: 'self.item[''question'']', writeback: false}
   - name: label_2
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'ZTIIYQ,ZWQBQJ'}
     data_bindings:
     - {property: text, code: 'self.item[''optiona'']', writeback: false}
   - name: label_3
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'PBBIWS,BHESPT'}
     data_bindings:
     - {property: text, code: 'self.item[''optionb'']', writeback: false}
   - name: label_4
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'SIMXXD,FKOUPQ'}
     data_bindings:
     - {property: text, code: 'self.item[''optionc'']', writeback: false}
   - name: label_5
-    properties: {}
+    properties: {font: p}
     type: Label
     layout_properties: {grid_position: 'XWXNYL,KLVUYK'}
     data_bindings:
