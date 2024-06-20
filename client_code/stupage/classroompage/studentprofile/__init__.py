@@ -46,12 +46,12 @@ class studentprofile(studentprofileTemplate):
 
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.student['exp'] >= round(self.classinfo['baselevel']*self.student['level']*self.classinfo['levelincrement']) and self.student['level'] < 10:
+    if self.student['exp'] >= round(self.classinfo['baselevel']+self.student['level']*self.classinfo['levelincrement']) and self.student['level'] < 10:
       self.student['level'] += 1
       self.student['exp'] -= round(self.student['level']*self.classinfo['baselevel']*self.classinfo['levelincrement'])
       self.label_7.text = self.student['exp']
       self.label_8.text = self.student['level']
-      self.label_9.text = round(self.classinfo['baselevel']*self.classinfo['baselevel']+(self.student['level']*self.classinfo['levelincrement']))
+      self.label_9.text = round(self.classinfo['baselevel']+(self.classinfo['baselevel']+(self.student['level']*self.classinfo['levelincrement']))
     elif self.student['exp'] < round(self.student['level']*self.classinfo['levelincrement']):
       alert("You do not have enough points!")
     elif self.student['level'] >= 10:
