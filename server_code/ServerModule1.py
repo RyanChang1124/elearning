@@ -44,20 +44,34 @@ def getmetrics():
   students = len(app_tables.users.search(role='Student'))
   lecturers = len(app_tables.users.search(role='Lecturer'))
   return total, students, lecturers
-
+'''
+@anvil.server.callable
+def getmetricsusers():
+  conn = psycopg2.connect(anvil.tables.get_connection_string())
+  with conn.cursor() as cur:
+      cur.execute("SELECT * FROM users")
+      total = len(cur)
+  with conn.cursor() as cur:
+      cur.execute("SELECT * FROM users WHERE role = 'Lecturer';")
+      lecturers = len(cur)
+  with conn.cursor() as cur:
+      cur.execute("SELECT * FROM users WHERE role = 'student';")
+      students = len(cur)
+  return total, students, lecturers
+'''
 @anvil.server.callable
 def plotactive():
-    # Get the current date and time
+    # get datetime
     now = datetime.now(pytz.utc)
     
-    # Calculate the date and time one month ago
+    # get date from a month agao
     one_month_ago = now - timedelta(days=30)
     
-    # Query the Users table for users who have logged in within the last month
+    # Query for active users
     recent_users = app_tables.users.search(tables.order_by("last_login", ascending=False))
     recent_users = [user for user in recent_users if user['last_login'] > one_month_ago]
     
-    # Query the Users table for all users
+    # Query for all users
     all_users = app_tables.users.search()
     all_users = [user for user in all_users]
     
@@ -65,7 +79,7 @@ def plotactive():
     logged_in = len(recent_users)
     not_logged_in = len(all_users) - logged_in
     
-    # Create a pie chart
+    # Plot
     fig, ax = plt.subplots()
 
     def value_and_percentage(val):
@@ -75,13 +89,13 @@ def plotactive():
         return "{:.1f}%\n({:d})".format(percentage, absolute)
     ax.pie([logged_in, not_logged_in], labels=['Active', 'Inactive'], autopct=value_and_percentage)
     
-    # Save the figure to a BytesIO object
+    # Save to bytes.io
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
     buf_bytes = buf.getvalue()
     
-    # Convert the BytesIO object to an Anvil Media object and return it
+    # convert to an image
     return anvil.BlobMedia("image/png", buf_bytes, name="pie_chart.png")
 
 @anvil.server.callable

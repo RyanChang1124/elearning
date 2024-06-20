@@ -21,7 +21,6 @@ class lecclasspage(lecclasspageTemplate):
     self.repeating_panel_1.items = quizzes
     self.init_components(**properties)
     
-
     # Any code you write here will run before the form opens.
 
   def outlined_button_1_click(self, **event_args):

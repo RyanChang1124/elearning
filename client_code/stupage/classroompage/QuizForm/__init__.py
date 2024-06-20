@@ -11,20 +11,19 @@ from anvil.tables import app_tables
 import math
 import random
 import time
-numofq = None
-correctq = 0
-quizcoderem = None
+
 class QuizForm(QuizFormTemplate):
     def __init__(self, quizcode, studentid, **properties):
-        global numofq
-        global quizcoderem
-        quizcoderem = quizcode
+        self.numofq = None
+        self.correctq = 0
+        self.quizcoderem = None
+        self.quizcoderem = quizcode
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.metadata = app_tables.quizzes.get(quizcode=quizcode)
         # Retrieve the quiz data
         self.questions = app_tables.quizcontent.search(quizcode=quizcode)
-        numofq = len(self.questions)
+        self.numofq = len(self.questions)
         # Initialize the score and the streak of correct answers
         self.score = 0
         self.correct_streak = 0
@@ -62,12 +61,12 @@ class QuizForm(QuizFormTemplate):
         else:
           self.outlined_card_3.visible = False 
 
-        # Start the timer for this question
+        # Start the timer
         time = question['time']
         if self.perk == 'time':
             # The student has the 'time' perk, so increase the time by a certain amount
             time = time * (1+(0.1 * self.level)) 
-            time = round(time) # Modify this to suit your needs
+            time = round(time)
         self.time_remaining = time
         self.timeleft.text = str(self.time_remaining)
         self.start_time = self.time_remaining
@@ -91,8 +90,6 @@ class QuizForm(QuizFormTemplate):
 
     def option_button_click(self, button, **event_args):
         """This method is called when the button is clicked"""
-        # Handle the user's answer
-        # 'button' is the button that was clicked
         self.timer_1.interval = 0
         self.record_answer(button)
 
@@ -107,7 +104,6 @@ class QuizForm(QuizFormTemplate):
             self.end_quiz()
 
     def record_answer(self, answer):
-        global correctq
         # Record the user's answer
         question = self.questions[self.current_question_index]
         correct_answer = question['answer']
@@ -121,9 +117,8 @@ class QuizForm(QuizFormTemplate):
             score = question_weight * (1 - elapsed_time / total_time)
             # If the student has the 'conf' perk, increase their score by a bonus amount
             if self.perk == 'conf' and self.correct_streak > 0:
-                score += 0.1 * self.level  # Modify this to suit your needs
-            # Round the score to the nearest integer
-            correctq += 1
+                score += 0.1 * self.level
+            self.correctq += 1
             score = round(score)
             self.outlined_card_1.visible = False
             self.outlined_card_2.visible = False
@@ -178,17 +173,14 @@ class QuizForm(QuizFormTemplate):
         self.score_label.text = "Score: " + str(self.score)
 
     def end_quiz(self):
-      global correctq
-      global numofq
-      global quizcoderem
       # End the quiz and display the user's score
       self.label_score.text = "Final score: " + str(self.score)
-      self.canswers.text = f"{correctq}/{numofq}"
-      self.accuracy.text = f"{(correctq/numofq)*100}%"
+      self.canswers.text = f"{self.correctq}/{self.numofq}"
+      self.accuracy.text = f"{(self.correctq/self.numofq)*100}%"
       app_tables.quizresult.add_row(student=self.student['student'],
-                          result=correctq,
-                          correctpercentage= (correctq/numofq),
-                          quizcode=quizcoderem,
+                          result=self.correctq,
+                          correctpercentage= (self.correctq/self.numofq),
+                          quizcode=self.quizcoderem,
                           points = self.score,
                           perk=self.perk)
       self.student['exp']+=self.score
@@ -217,16 +209,14 @@ class QuizForm(QuizFormTemplate):
       self.option_button_click('d')
 
     def exit_click(self, **event_args):
-      global quizcoderem
       """This method is called when the button is clicked"""
-      classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
+      classtoreturn = app_tables.quizzes.get(quizcode=self.quizcoderem)['classcode']
       open_form('stupage.classroompage',classtoreturn)
 
     def outlined_button_1_click(self, **event_args):
-      global quizcoderem
       """This method is called when the button is clicked"""
-      classtoreturn = app_tables.quizzes.get(quizcode=quizcoderem)['classcode']
-      targetquiz = app_tables.quizzes.get(quizcode=quizcoderem)
+      classtoreturn = app_tables.quizzes.get(quizcode=self.quizcoderem)['classcode']
+      targetquiz = app_tables.quizzes.get(quizcode=self.quizcoderem)
       if targetquiz['reports'] is None:
         targetquiz['reports'] = 1
       else:
