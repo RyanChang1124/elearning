@@ -165,7 +165,7 @@ class QuizForm(QuizFormTemplate):
                 self.outlined_card_2.visible = False
                 self.outlined_card_3.visible = False
                 self.outlined_card_6.visible = True
-                self.message_label.text = "Incorrent Answer :( "
+                self.message_label.text = "Incorrect Answer :( "
                 time.sleep(2)
                 self.outlined_card_1.visible = True
                 self.outlined_card_2.visible = True
