@@ -37,3 +37,18 @@ class admindash(admindashTemplate):
     """This method is called when the button is clicked"""
     anvil.users.logout()
     open_form('menu')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.logout()
+    anvil.users.signup_with_form()
+    anvil.server.call('newuservalue','role','Admin')
+    anvil.server.call('newuservalue','setup_complete',True)
+    open_form("menu.admindash")
+    
+    
+
+  
+
+
+

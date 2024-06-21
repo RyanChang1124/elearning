@@ -65,11 +65,11 @@ def plotactive():
     now = datetime.now(pytz.utc)
     
     # get date from a month agao
-    one_month_ago = now - timedelta(days=30)
+    one_week_ago = now - timedelta(days=7)
     
     # Query for active users
     recent_users = app_tables.users.search(tables.order_by("last_login", ascending=False))
-    recent_users = [user for user in recent_users if user['last_login'] > one_month_ago]
+    recent_users = [user for user in recent_users if user['last_login'] > one_week_ago]
     
     # Query for all users
     all_users = app_tables.users.search()

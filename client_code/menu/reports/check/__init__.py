@@ -21,12 +21,15 @@ class check(checkTemplate):
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    target = app_tables.quizcontent.search(quizcode=self.quizcode)
-    target.delete()
-    target = app_tables.quizzes.search(quizcode=self.quizcode)
-    target.delete()
-    target = app_tables.quizresult.search(quizcode=self.quizcode)
-    target.delete()
+    rows = app_tables.quizcontent.search(quizcode=self.quizcode)
+    for row in rows:
+        row.delete()
+    rows = app_tables.quizzes.search(quizcode=self.quizcode)
+    for row in rows:
+        row.delete()
+    rows = app_tables.quizresult.search(quizcode=self.quizcode)
+    for row in rows:
+        row.delete()
     open_form('menu.reports')
 
   def outlined_button_2_click(self, **event_args):

@@ -15,6 +15,7 @@ class reports(reportsTemplate):
     
     # Filter the rows where "reports" is more than 0
     reports = [row for row in all_rows if row['reports'] > 0]
+    reports = sorted(reports, key=lambda row: row['reports'], reverse=True)
     self.repeating_panel_1.items = reports
     self.init_components(**properties)
 
