@@ -18,8 +18,11 @@ class ItemTemplate9(ItemTemplate9Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.item['response'] = self.response.text
-    alert("Response Saved!")
+    try:
+      self.item['response'] = self.response.text
+      alert("Response Saved!")
+    except:
+      alert("There are invalid or missing fields!")
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""

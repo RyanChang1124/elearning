@@ -76,12 +76,15 @@ class quizedit(quizeditTemplate):
     """This method is called when the button is clicked"""
     global classidnow
     global quizidnow
-    uprow = app_tables.quizzes.get(classcode=classidnow,quizcode=quizidnow)
-    uprow.update(available=self.check_box_1.checked,
-                endtime=self.date_picker_1.date,
-                quizname=self.quizname.text,
-                lecturer=anvil.users.get_user()['username'])
-    open_form('lecpage.lecclasspage',classidnow)
+    if self.quizname.text is not None and self.date_picker_1.date is not None:
+      uprow = app_tables.quizzes.get(classcode=classidnow,quizcode=quizidnow)
+      uprow.update(available=self.check_box_1.checked,
+                  endtime=self.date_picker_1.date,
+                  quizname=self.quizname.text,
+                  lecturer=anvil.users.get_user()['username'])
+      open_form('lecpage.lecclasspage',classidnow)
+    else:
+      alert("There are missing fields!")
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""

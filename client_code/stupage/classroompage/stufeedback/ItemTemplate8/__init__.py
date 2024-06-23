@@ -18,9 +18,12 @@ class ItemTemplate8(ItemTemplate8Template):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.item['content'] = self.Subject.text
-    alert("Feedback Saved!")
+    try:
+      """This method is called when the button is clicked"""
+      self.item['content'] = self.Subject.text
+      alert("Feedback Saved!")
+    except:
+      alert("There are missing or invalid fields!")
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
