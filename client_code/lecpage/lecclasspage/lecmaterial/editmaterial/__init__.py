@@ -14,6 +14,8 @@ class editmaterial(editmaterialTemplate):
     global classcodenow
     classcodenow = classid
     self.material = materialid
+    self.relevant_rows = app_tables.quizzes.search(classcode=classid)
+    self.drop_down_1.items = self.relevant_rows['quizname']
     self.init_components(**properties)
     self.load_material(materialid)
 
@@ -47,6 +49,8 @@ class editmaterial(editmaterialTemplate):
       self.material['title'] = self.title_box.text
       self.material['desc'] = self.desc_box.text
       self.material['attachment'] = self.file_loader_1.file
+      if self.drop_down_1.selected_value is not None:
+        self.material['checkpoint'] = self.drop_down_1.selected_value['quizcode']
 
       # Commit the changes to the database
       self.material.update()

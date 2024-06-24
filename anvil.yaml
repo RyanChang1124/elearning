@@ -168,6 +168,9 @@ db_schema:
     - name: attachment
       admin_ui: {width: 200, order: 5}
       type: media
+    - name: checkpoint
+      admin_ui: {width: 200, order: 6}
+      type: number
     title: Materials
   quizcontent:
     client: full
