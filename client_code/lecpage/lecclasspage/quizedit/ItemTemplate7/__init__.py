@@ -29,6 +29,7 @@ class ItemTemplate7(ItemTemplate7Template):
         if self.file_loader_1.file:
             self.item['image'] = self.file_loader_1.file
         self.item.update()
+        alert("Save Successful!")
       else:
         alert("There are missing fields!")
     except:
@@ -39,5 +40,12 @@ class ItemTemplate7(ItemTemplate7Template):
   def text_box_question_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     pass
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    choice = confirm("Are you sure you want to delete this question?",buttons=[("Yes","YES"),("No","NO")])
+    if choice == "YES":
+      self.item.delete()
+      self.remove_from_parent()
 
 
