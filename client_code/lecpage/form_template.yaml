@@ -8,6 +8,11 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: outlined_button_2
+    properties: {text: Log Out, role: outlined-button}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: outlined_button_2_click}
   - name: label_2
     properties: {text: Lecturer, font: p, font_size: 16, bold: true}
     type: Label

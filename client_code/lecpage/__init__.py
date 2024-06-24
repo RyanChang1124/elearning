@@ -24,3 +24,8 @@ class lecpage(lecpageTemplate):
     """This method is called when the button is clicked"""
     open_form('lecpage.classcreation')
 
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.logout()
+    open_form('menu')
+

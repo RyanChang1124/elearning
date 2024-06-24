@@ -50,3 +50,9 @@ class classroompage(classroompageTemplate):
     """This method is called when the button is clicked"""
     global classnow
     open_form('stupage.classroompage.stufeedback',classnow)
+
+  def outlined_button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    
+    
